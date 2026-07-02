@@ -41,7 +41,8 @@ iconify-icon{display:inline-block;vertical-align:-0.125em}
 body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 20% 0%,rgba(201,100,47,0.09),transparent 55%),radial-gradient(ellipse 60% 50% at 85% 100%,rgba(91,127,140,0.07),transparent 55%);pointer-events:none;z-index:0}
 
 /* ===== NAV ===== */
-nav{position:fixed;top:0;left:0;right:0;padding:14px 0;background:rgba(16,13,9,0.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.04);z-index:100}
+nav{position:fixed;top:0;left:0;right:0;padding:18px 0;background:rgba(16,13,9,0.30);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);border-bottom:1px solid rgba(255,255,255,0);z-index:100;transition:padding 0.35s ease,background 0.35s ease,border-color 0.35s ease,box-shadow 0.35s ease}
+nav.scrolled{padding:11px 0;background:rgba(16,13,9,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.05);box-shadow:0 10px 34px rgba(0,0,0,0.36)}
 .nav-inner{max-width:1320px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:28px}
 .logo{font-family:'Fraunces',serif;font-weight:600;font-size:23px;letter-spacing:0.01em;color:var(--cream);display:flex;align-items:baseline;gap:8px}
 .logo .em{color:var(--terra-bright)}
@@ -51,7 +52,22 @@ nav{position:fixed;top:0;left:0;right:0;padding:14px 0;background:rgba(16,13,9,0
 .nav-links a:hover{color:var(--terra-bright)}
 .nav-cta{padding:10px 22px;background:var(--terra);color:var(--ink-deep);border-radius:3px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;transition:all 0.25s}
 .nav-cta:hover{background:var(--terra-bright);transform:translateY(-1px)}
-@media(max-width:980px){.nav-links a:not(.nav-cta){display:none}}
+/* hamburger */
+.nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;border:1px solid var(--border-bright);border-radius:5px;background:var(--terra-soft);cursor:pointer;padding:0 11px;transition:all 0.25s}
+.nav-toggle:hover{border-color:var(--terra-bright)}
+.nav-toggle span{display:block;height:2px;width:100%;background:var(--cream);border-radius:2px;transition:transform 0.3s ease,opacity 0.2s ease}
+body.menu-open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-open .nav-toggle span:nth-child(2){opacity:0}
+body.menu-open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:980px){
+  .nav-toggle{display:flex}
+  .nav-links{position:fixed;top:0;right:0;bottom:0;width:min(84vw,340px);flex-direction:column;justify-content:flex-start;align-items:stretch;gap:0;padding:96px 30px 40px;background:linear-gradient(160deg,var(--ink-elev),var(--ink-deep));border-left:1px solid var(--border-bright);box-shadow:-30px 0 80px rgba(0,0,0,0.5);transform:translateX(102%);transition:transform 0.4s cubic-bezier(0.5,0,0.2,1);z-index:110}
+  body.menu-open .nav-links{transform:translateX(0)}
+  .nav-links a:not(.nav-cta){display:block;font-size:13px;padding:18px 0;border-bottom:1px solid var(--border);letter-spacing:0.14em}
+  .nav-links .nav-cta{margin-top:24px;text-align:center;padding:16px;font-size:12px}
+  .nav-backdrop{position:fixed;inset:0;background:rgba(8,6,4,0.55);backdrop-filter:blur(2px);opacity:0;visibility:hidden;transition:opacity 0.35s ease,visibility 0.35s;z-index:105}
+  body.menu-open .nav-backdrop{opacity:1;visibility:visible}
+}
 
 /* ===== HERO ===== */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
@@ -180,6 +196,84 @@ section{padding:118px 0;position:relative;z-index:1}
 .tool-body p{font-size:14px;color:var(--text-muted);margin-bottom:18px;max-width:38ch;font-weight:300}
 .tool-link{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra-bright);font-weight:600}
 
+/* ===== SECTION DIVIDER MOTIF ===== */
+.divider-motif{display:flex;align-items:center;justify-content:center;gap:14px;padding:0;margin:0 auto;max-width:1320px}
+.divider-motif .line{height:1px;flex:1;max-width:120px;background:linear-gradient(90deg,transparent,var(--border-bright))}
+.divider-motif .line.r{background:linear-gradient(90deg,var(--border-bright),transparent)}
+.divider-motif .diamond{width:8px;height:8px;background:var(--terra);transform:rotate(45deg);box-shadow:0 0 12px rgba(201,100,47,0.5)}
+.divider-motif iconify-icon{color:var(--terra);font-size:20px}
+
+/* ===== CREDENTIAL BAR ===== */
+.credbar{background:linear-gradient(180deg,var(--ink),var(--ink-deep));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:44px 0}
+.credbar-inner{max-width:1320px;margin:0 auto;padding:0 28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:18px}
+.credbar-label{font-size:10px;letter-spacing:0.24em;text-transform:uppercase;color:var(--text-dim);width:100%;text-align:center;margin-bottom:6px}
+.cred-pill{display:inline-flex;align-items:center;gap:12px;padding:15px 24px;border:1px solid var(--border);border-radius:100px;background:rgba(34,28,20,0.5);transition:all 0.3s}
+.cred-pill:hover{border-color:var(--border-bright);background:var(--terra-soft);transform:translateY(-3px)}
+.cred-pill iconify-icon{font-size:24px;color:var(--terra-bright);flex-shrink:0}
+.cred-pill .ct{font-family:'Fraunces',serif;font-size:16px;color:var(--cream);font-weight:600;line-height:1.1}
+.cred-pill .cs{display:block;font-size:10px;color:var(--text-dim);letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;font-family:'Inter',sans-serif;font-weight:500}
+
+/* ===== PROCESS / HOW IT WORKS ===== */
+.process{background:var(--ink)}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:20px}
+.proc-step{padding:44px 30px;border-right:1px solid var(--border);position:relative;transition:background 0.3s}
+.proc-step:last-child{border-right:0}
+.proc-step:hover{background:rgba(34,28,20,0.45)}
+.proc-step .proc-ic{width:50px;height:50px;border-radius:12px;background:var(--terra-soft);border:1px solid var(--border-bright);display:flex;align-items:center;justify-content:center;margin-bottom:22px}
+.proc-step .proc-ic iconify-icon{font-size:25px;color:var(--terra-bright)}
+.proc-num{font-family:'Fraunces',serif;font-size:15px;color:var(--terra);font-weight:600;letter-spacing:0.12em;display:block;margin-bottom:10px}
+.proc-step h3{font-family:'Fraunces',serif;font-size:21px;color:var(--cream);margin-bottom:12px;font-weight:600;line-height:1.2}
+.proc-step p{font-size:14px;color:var(--text-muted);line-height:1.65;font-weight:300}
+.proc-step .proc-es{margin-top:18px;padding-top:14px;border-top:1px dashed var(--border-bright);font-size:11px;letter-spacing:0.06em;color:var(--terra-bright);font-style:italic}
+@media(max-width:980px){.proc-steps{grid-template-columns:repeat(2,1fr)}.proc-step:nth-child(2){border-right:0}.proc-step:nth-child(1),.proc-step:nth-child(2){border-bottom:1px solid var(--border)}}
+@media(max-width:560px){.proc-steps{grid-template-columns:1fr}.proc-step{border-right:0;border-bottom:1px solid var(--border)}.proc-step:last-child{border-bottom:0}}
+
+/* ===== LEAD MAGNET ===== */
+.magnet{background:var(--ink-deep);position:relative;overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.magnet::before{content:'';position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1449844908441-8829872d2607?w=2000&q=70');background-size:cover;background-position:center;opacity:0.08;filter:saturate(0.9)}
+.magnet-inner{position:relative;display:grid;grid-template-columns:1.08fr 0.92fr;gap:72px;align-items:center}
+@media(max-width:980px){.magnet-inner{grid-template-columns:1fr;gap:48px}}
+.magnet-text h2{font-family:'Fraunces',serif;font-size:clamp(34px,4.4vw,58px);line-height:1.02;color:var(--cream);margin-bottom:22px;font-weight:500;letter-spacing:-0.01em;max-width:18ch}
+.magnet-text h2 em{color:var(--terra-bright);font-style:italic}
+.magnet-text p{font-size:16px;color:var(--text-muted);max-width:52ch;line-height:1.75;margin-bottom:22px;font-weight:300}
+.magnet-text p strong{color:var(--cream);font-weight:500}
+.magnet-feat{margin:26px 0 34px;list-style:none}
+.magnet-feat li{padding:13px 0;border-top:1px solid var(--border);font-size:14px;color:var(--text-muted);display:flex;align-items:flex-start;gap:14px;font-weight:300}
+.magnet-feat li iconify-icon{color:var(--terra);font-size:18px;flex-shrink:0;margin-top:2px}
+.magnet-lang{display:inline-flex;gap:8px;margin-bottom:26px}
+.magnet-lang button{padding:9px 18px;border:1px solid var(--border-bright);background:transparent;color:var(--text-muted);font-family:inherit;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;border-radius:100px;cursor:pointer;transition:all 0.25s}
+.magnet-lang button.active{background:var(--terra);color:var(--ink-deep);border-color:var(--terra)}
+.magnet-form{display:grid;gap:12px;max-width:440px}
+.magnet-form input{padding:16px 20px;background:rgba(34,28,20,0.75);border:1px solid var(--border-bright);color:var(--cream);font-size:14px;font-family:inherit;border-radius:4px}
+.magnet-form input::placeholder{color:var(--text-dim)}
+.magnet-form input:focus{outline:none;border-color:var(--terra-bright)}
+.magnet-form .cta-primary{width:100%;justify-content:center}
+.magnet-disc{font-size:11px;color:var(--text-dim);margin-top:12px;letter-spacing:0.03em}
+.magnet-visual{position:relative;perspective:1200px}
+.magnet-cover{aspect-ratio:3/4;background:linear-gradient(155deg,var(--ink-elev) 0%,var(--ink-deep) 100%);border:1px solid var(--border-bright);border-radius:6px;padding:44px 38px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(226,138,79,0.1) inset;transform:rotate(-2.4deg);transition:transform 0.5s}
+.magnet-cover:hover{transform:rotate(0deg) scale(1.02)}
+.magnet-cover::after{content:'';position:absolute;top:-30px;right:-30px;width:150px;height:150px;background:radial-gradient(circle,rgba(201,100,47,0.16),transparent 70%);pointer-events:none}
+.magnet-cover-tag{font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--terra);font-weight:700}
+.magnet-cover-meta-top{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-dim);margin-top:12px}
+.magnet-cover-title{font-family:'Fraunces',serif;font-size:38px;line-height:1.06;color:var(--cream);font-weight:500}
+.magnet-cover-title em{color:var(--terra-bright);font-style:italic}
+.magnet-cover-flag{font-size:11px;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;border-top:1px solid var(--border);padding-top:16px}
+.magnet-cover .seal{display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--terra-bright);letter-spacing:0.1em;text-transform:uppercase;font-weight:600;margin-top:14px}
+
+/* ===== FAQ ===== */
+.faq{background:var(--ink)}
+.faq-list{max-width:900px;margin:8px auto 0;border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;text-align:left;background:transparent;border:0;cursor:pointer;padding:28px 4px;font-family:'Fraunces',serif;font-size:clamp(18px,2vw,23px);color:var(--cream);font-weight:600;line-height:1.35;transition:color 0.25s}
+.faq-q:hover{color:var(--terra-bright)}
+.faq-q .faq-ic{flex-shrink:0;width:34px;height:34px;border-radius:50%;border:1px solid var(--border-bright);display:flex;align-items:center;justify-content:center;color:var(--terra-bright);transition:all 0.35s;background:var(--terra-soft)}
+.faq-item.open .faq-q .faq-ic{transform:rotate(45deg);background:var(--terra);color:var(--ink-deep);border-color:var(--terra)}
+.faq-q .faq-ic iconify-icon{font-size:20px}
+.faq-a{overflow:hidden;max-height:0;transition:max-height 0.4s ease}
+.faq-a-inner{padding:0 4px 30px;font-size:15px;color:var(--text-muted);line-height:1.75;font-weight:300;max-width:74ch}
+.faq-a-inner strong{color:var(--cream);font-weight:500}
+.faq-a-inner .es{display:block;margin-top:12px;font-style:italic;color:var(--text-dim);font-size:14px}
+
 /* ===== FINAL CTA ===== */
 .final{background:var(--ink-deep);text-align:center}
 .final-inner{max-width:760px;margin:0 auto;padding:0 28px}
@@ -208,19 +302,24 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
 <div class="demo-ribbon">Concept redesign built for Javier Melendez &middot; not an official site</div>
 
 <!-- ===== NAV ===== -->
-<nav>
+<nav id="nav">
   <div class="nav-inner">
     <a href="#top" class="logo"><span class="em">Javier</span> Melendez<span class="sub">Austin Realtor</span></a>
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
       <a href="#bilingual">En Espa&ntilde;ol</a>
-      <a href="#programs">How I Help</a>
-      <a href="#areas">Areas</a>
+      <a href="#process">How It Works</a>
+      <a href="#areas">Neighborhoods</a>
       <a href="#story">About</a>
+      <a href="#guide">Free Guide</a>
       <a href="#reviews">Reviews</a>
       <a href="#contact" class="nav-cta">Let's Talk</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+<div class="nav-backdrop" id="navBackdrop"></div>
 
 <!-- ===== HERO ===== -->
 <header class="hero" id="top">
@@ -239,9 +338,9 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
   <div class="hero-meta">
     <div class="hero-meta-label">Serving Central Texas</div>
     <dl class="hero-meta-grid">
-      <div><dt>12+</dt><dd>Years in Austin</dd></div>
-      <div><dt>2</dt><dd>Languages, full deal</dd></div>
-      <div><dt>11</dt><dd>Metro cities covered</dd></div>
+      <div><dt><span class="count" data-to="12" data-suffix="+">0</span></dt><dd>Years in Austin</dd></div>
+      <div><dt><span class="count" data-to="2">0</span></dt><dd>Languages, full deal</dd></div>
+      <div><dt><span class="count" data-to="11">0</span></dt><dd>Metro cities covered</dd></div>
       <div><dt>eXp</dt><dd>Realty &middot; TREC licensed</dd></div>
     </dl>
   </div>
@@ -251,11 +350,23 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
 <section class="trust">
   <div class="container">
     <div class="stat-grid">
-      <div class="stat-tile"><div class="stat-num">12<span class="small">+</span></div><div class="stat-label">Years living &amp; working in Austin</div></div>
-      <div class="stat-tile"><div class="stat-num">100<span class="small">%</span></div><div class="stat-label">Bilingual &middot; English &amp; Spanish</div></div>
+      <div class="stat-tile"><div class="stat-num"><span class="count" data-to="12">0</span><span class="small">+</span></div><div class="stat-label">Years living &amp; working in Austin</div></div>
+      <div class="stat-tile"><div class="stat-num"><span class="count" data-to="100">0</span><span class="small">%</span></div><div class="stat-label">Bilingual &middot; English &amp; Spanish</div></div>
       <div class="stat-tile"><div class="stat-num">XX</div><div class="stat-label">Families guided home<span class="stat-flag">confirm real number</span></div></div>
       <div class="stat-tile"><div class="stat-num">5.0</div><div class="stat-label">Client rating<span class="stat-flag">confirm from Google / Zillow</span></div></div>
     </div>
+  </div>
+</section>
+
+<!-- ===== CREDENTIAL BAR ===== -->
+<section class="credbar">
+  <div class="credbar-inner">
+    <div class="credbar-label">Credentials &amp; standing</div>
+    <div class="cred-pill reveal"><iconify-icon icon="mdi:home-group"></iconify-icon><div><div class="ct">eXp Realty</div><span class="cs">Brokerage</span></div></div>
+    <div class="cred-pill reveal"><iconify-icon icon="mdi:certificate-outline"></iconify-icon><div><div class="ct">TREC Licensed</div><span class="cs">#759500</span></div></div>
+    <div class="cred-pill reveal"><iconify-icon icon="mdi:translate"></iconify-icon><div><div class="ct">Bilingual</div><span class="cs">English &amp; Espa&ntilde;ol</span></div></div>
+    <div class="cred-pill reveal"><iconify-icon icon="mdi:school-outline"></iconify-icon><div><div class="ct">Texas State</div><span class="cs">BA, Advertising</span></div></div>
+    <div class="cred-pill reveal"><iconify-icon icon="mdi:map-marker-check-outline"></iconify-icon><div><div class="ct">12+ Years</div><span class="cs">Austin local</span></div></div>
   </div>
 </section>
 
@@ -333,21 +444,110 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
   </div>
 </section>
 
-<!-- ===== AREAS ===== -->
-<section class="areas" id="areas">
+<!-- ===== PROCESS / HOW IT WORKS ===== -->
+<section class="process" id="process">
   <div class="container">
-    <div class="section-eyebrow">03 &mdash; Where Javier works</div>
+    <div class="section-eyebrow">03 &mdash; How it works</div>
+    <h2 class="section-title">From first call to <em>keys in hand.</em></h2>
+    <p class="section-sub">No mystery, no runaround. Buying a home with Javier is four clear stages - and you always know which one you are in, in English or in Spanish.</p>
+    <div class="proc-steps">
+      <div class="proc-step reveal">
+        <div class="proc-ic"><iconify-icon icon="mdi:phone-in-talk-outline"></iconify-icon></div>
+        <span class="proc-num">Step 01</span>
+        <h3>Strategy call</h3>
+        <p>We sit down (in person, phone, or video) to map your budget, must-haves, timeline, and target cities - then connect you with a trusted local lender so you shop with real numbers.</p>
+        <div class="proc-es">Week 1</div>
+      </div>
+      <div class="proc-step reveal">
+        <div class="proc-ic"><iconify-icon icon="mdi:home-search-outline"></iconify-icon></div>
+        <span class="proc-num">Step 02</span>
+        <h3>Guided tours</h3>
+        <p>Curated listings across your metro cities, toured on your schedule. Javier reads each home like a local - the good bones, the red flags, and the resale story national sites miss.</p>
+        <div class="proc-es">Weeks 2-6</div>
+      </div>
+      <div class="proc-step reveal">
+        <div class="proc-ic"><iconify-icon icon="mdi:file-sign"></iconify-icon></div>
+        <span class="proc-num">Step 03</span>
+        <h3>Offer &amp; negotiation</h3>
+        <p>When you find it, Javier writes a sharp offer, negotiates on your behalf, and walks you through inspection and contract line by line - so you sign knowing exactly what you agreed to.</p>
+        <div class="proc-es">Under contract</div>
+      </div>
+      <div class="proc-step reveal">
+        <div class="proc-ic"><iconify-icon icon="mdi:key-variant"></iconify-icon></div>
+        <span class="proc-num">Step 04</span>
+        <h3>Keys &amp; beyond</h3>
+        <p>We manage the countdown to closing, hand you the keys, and stay in your corner after you move in - contractors, questions, and market updates whenever you need them.</p>
+        <div class="proc-es">Closing day</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DIVIDER ===== -->
+<div class="divider-motif" style="padding:0 28px"><span class="line"></span><iconify-icon icon="mdi:home-heart"></iconify-icon><span class="line r"></span></div>
+
+<!-- ===== AREAS / NEIGHBORHOODS ===== -->
+<section class="areas" id="areas" style="padding-top:96px">
+  <div class="container">
+    <div class="section-eyebrow">04 &mdash; Neighborhoods &amp; market</div>
     <h2 class="section-title">Central Texas, <em>street by street.</em></h2>
-    <p class="section-sub">Twelve years here means knowing which neighborhood fits which family - the commute, the schools, the builder, the resale. These are the cities Javier covers most.</p>
+    <p class="section-sub">Twelve years here means knowing which neighborhood fits which family - the commute, the schools, the builder, the resale. Here is the character of each city Javier covers, in one honest line.</p>
     <div class="area-grid">
-      <div class="area-chip reveal"><div class="city">Austin</div><div class="note">Home base</div></div>
-      <div class="area-chip reveal"><div class="city">Round Rock</div><div class="note">Family &amp; value</div></div>
-      <div class="area-chip reveal"><div class="city">Georgetown</div><div class="note">Charm &amp; growth</div></div>
-      <div class="area-chip reveal"><div class="city">Leander</div><div class="note">New builds</div></div>
-      <div class="area-chip reveal"><div class="city">Cedar Park</div><div class="note">Schools</div></div>
-      <div class="area-chip reveal"><div class="city">Pflugerville</div><div class="note">First homes</div></div>
-      <div class="area-chip reveal"><div class="city">Hutto</div><div class="note">Affordable</div></div>
-      <div class="area-chip reveal"><div class="city">Buda &amp; Kyle</div><div class="note">South metro</div></div>
+      <div class="area-chip reveal"><div class="city">Austin</div><div class="note">Urban core - condos to hills</div></div>
+      <div class="area-chip reveal"><div class="city">Round Rock</div><div class="note">Family value, strong schools</div></div>
+      <div class="area-chip reveal"><div class="city">Georgetown</div><div class="note">Historic square, fast growth</div></div>
+      <div class="area-chip reveal"><div class="city">Leander</div><div class="note">New builds, commuter rail</div></div>
+      <div class="area-chip reveal"><div class="city">Cedar Park</div><div class="note">Top schools, master-planned</div></div>
+      <div class="area-chip reveal"><div class="city">Pflugerville</div><div class="note">First-home sweet spot</div></div>
+      <div class="area-chip reveal"><div class="city">Hutto</div><div class="note">Affordable, small-town feel</div></div>
+      <div class="area-chip reveal"><div class="city">Buda &amp; Kyle</div><div class="note">South metro, room to grow</div></div>
+      <div class="area-chip reveal"><div class="city">Georgetown N.</div><div class="note">Jarrell &amp; Taylor value belt</div></div>
+      <div class="area-chip reveal"><div class="city">Taylor</div><div class="note">Samsung-driven boom town</div></div>
+      <div class="area-chip reveal"><div class="city">Jarrell</div><div class="note">Lowest entry price north</div></div>
+      <div class="area-chip reveal"><div class="city">Kyle</div><div class="note">Young families, quick commute</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEAD MAGNET ===== -->
+<section class="magnet" id="guide">
+  <div class="container">
+    <div class="magnet-inner">
+      <div class="magnet-text">
+        <div class="section-eyebrow">05 &mdash; Free download</div>
+        <h2>The Austin First-Time Buyer's <em>Roadmap.</em></h2>
+        <p>The exact path Javier walks his buyers down - from "can I even afford this?" to keys in hand - written for people doing it for the very first time. <strong>No jargon, no pressure, no obligation.</strong></p>
+        <ul class="magnet-feat">
+          <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon><span>How much home you can really afford in today's Austin metro market</span></li>
+          <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon><span>The full timeline, step by step, so nothing catches you off guard</span></li>
+          <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon><span>Which cities fit which budgets - Austin vs. the growing suburbs</span></li>
+          <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon><span>Down payment and first-time buyer programs most people miss</span></li>
+          <li><iconify-icon icon="mdi:check-circle-outline"></iconify-icon><span>The questions to ask before you sign anything</span></li>
+        </ul>
+        <div class="magnet-lang" role="group" aria-label="Choose language">
+          <button type="button" class="active" id="langEn">English</button>
+          <button type="button" id="langEs">En Espa&ntilde;ol</button>
+        </div>
+        <form class="magnet-form" onsubmit="event.preventDefault();alert('Demo only. The live version captures your name and email and delivers the roadmap PDF instantly.');">
+          <input type="text" placeholder="First name / Nombre" required>
+          <input type="email" placeholder="Your best email / Correo" required>
+          <button type="submit" class="cta-primary" id="magnetBtn"><iconify-icon icon="mdi:download"></iconify-icon>Send me the roadmap</button>
+        </form>
+        <p class="magnet-disc">Free PDF, delivered instantly. Available in English and Spanish. No spam - just the occasional Austin market note you can unsubscribe from in one tap.</p>
+      </div>
+      <div class="magnet-visual">
+        <div class="magnet-cover">
+          <div>
+            <div class="magnet-cover-tag">Javier Melendez &middot; Free Guide</div>
+            <p class="magnet-cover-meta-top">2026 Edition &middot; Austin Metro</p>
+          </div>
+          <h3 class="magnet-cover-title" id="coverTitle">The Austin <em>First-Time Buyer's</em> Roadmap</h3>
+          <div>
+            <div class="magnet-cover-flag">A bilingual agent's step-by-step playbook</div>
+            <span class="seal"><iconify-icon icon="mdi:translate"></iconify-icon>Disponible en Espa&ntilde;ol</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -361,7 +561,7 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
         <div class="ph-flag">Placeholder - swap in Javier's real headshot</div>
       </div>
       <div class="reveal">
-        <div class="section-eyebrow">04 &mdash; Meet Javier</div>
+        <div class="section-eyebrow">06 &mdash; Meet Javier</div>
         <h2 class="section-title">From Jalisco to Chicago to <em>home in Austin.</em></h2>
         <p>Javier Melendez was born in Jalisco, Mexico, grew up between Chicago and Austin, and has spent <strong>more than twelve years</strong> making Central Texas home. He studied advertising at Texas State University, which is a fancy way of saying he knows how to make a home look its best and get it in front of the right people.</p>
         <p>But the reason clients stay with him is simpler. <strong>He treats buying or selling a home like what it is - one of the biggest decisions of your life</strong> - and he brings knowledge, straight talk, and dedication to every step. In English or in Spanish, you always know where things stand.</p>
@@ -379,7 +579,7 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
 <!-- ===== TESTIMONIALS ===== -->
 <section class="testimonials" id="reviews">
   <div class="container">
-    <div class="section-eyebrow">05 &mdash; In their words</div>
+    <div class="section-eyebrow">07 &mdash; In their words</div>
     <h2 class="section-title">First-time buyers who <em>felt guided,</em> not sold.</h2>
     <p class="section-sub">Real reviews from Javier's clients. The through-line is always the same: available, patient, and clear when it counted most.</p>
     <div class="testimonial-grid">
@@ -403,10 +603,45 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
   </div>
 </section>
 
+<!-- ===== FAQ ===== -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-eyebrow">08 &mdash; Straight answers</div>
+    <h2 class="section-title">Questions <em>first-time buyers</em> actually ask.</h2>
+    <p class="section-sub">The stuff you might feel awkward asking out loud. Here are honest answers before you ever pick up the phone.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q"><span>Can we do the whole thing in Spanish?</span><span class="faq-ic"><iconify-icon icon="mdi:plus"></iconify-icon></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Yes - completely. Javier is fully bilingual and runs every part of the transaction in the language you think in: the tours, the offer, the contract, the lender calls, and the closing table. Nothing gets lost in translation and nobody hands you off to a stranger halfway through.<span class="es">Si, todo el proceso puede ser en espa&ntilde;ol - recorridos, oferta, contrato, y el cierre. Hablemos cuando quieras.</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>I've never bought a home before. Is that a problem?</span><span class="faq-ic"><iconify-icon icon="mdi:plus"></iconify-icon></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Not at all - first-time buyers are who Javier does his best work with. He explains every step in plain language, never makes you feel silly for asking, and paces the whole thing so you always understand what is happening and why before you commit to anything.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>How much do I need for a down payment?</span><span class="faq-ic"><iconify-icon icon="mdi:plus"></iconify-icon></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Less than most people assume. Depending on the loan program, first-time buyers in Texas can put down far below the "20%" myth, and there are down-payment assistance programs many buyers never hear about. On your strategy call, Javier connects you with a trusted lender to get your real numbers - no guessing.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Does it cost me anything to work with Javier as a buyer?</span><span class="faq-ic"><iconify-icon icon="mdi:plus"></iconify-icon></span></button>
+        <div class="faq-a"><div class="faq-a-inner">Javier will walk you through exactly how buyer representation and agent compensation work in today's market before you sign anything, so there are zero surprises. The first conversation is always free and with no obligation - you decide if it is a fit.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>Which cities should I even be looking at?</span><span class="faq-ic"><iconify-icon icon="mdi:plus"></iconify-icon></span></button>
+        <div class="faq-a"><div class="faq-a-inner">That is exactly what the strategy call is for. Austin proper, Round Rock, Georgetown, Leander, Cedar Park, Pflugerville, Hutto, Buda, Kyle, Jarrell, Taylor - each has a different price point, commute, and school story. Javier matches your budget and life to the right neighborhoods instead of letting you guess.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q"><span>How long does buying a home usually take?</span><span class="faq-ic"><iconify-icon icon="mdi:plus"></iconify-icon></span></button>
+        <div class="faq-a"><div class="faq-a-inner">It varies, but a typical first-time purchase runs a few weeks of touring, then roughly 30-45 days from accepted offer to closing. Javier gives you a realistic timeline on day one and keeps you updated at every stage so you are never left wondering what happens next.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== TOOLS ===== -->
 <section class="tools" id="tools">
   <div class="container">
-    <div class="section-eyebrow">06 &mdash; Start now, free</div>
+    <div class="section-eyebrow">09 &mdash; Start now, free</div>
     <h2 class="section-title">Two answers, <em>two minutes.</em></h2>
     <p class="section-sub">Whether you are buying or thinking about selling, the first step costs nothing and tells you where you really stand.</p>
     <div class="tools-grid">
@@ -435,7 +670,7 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
 <!-- ===== FINAL CTA ===== -->
 <section class="final" id="contact">
   <div class="final-inner">
-    <div class="section-eyebrow" style="justify-content:center">07 &mdash; Let's talk / Hablemos</div>
+    <div class="section-eyebrow" style="justify-content:center">10 &mdash; Let's talk / Hablemos</div>
     <h2>One honest conversation about <em>your next move.</em></h2>
     <p>No pressure, no script. Tell Javier where you are - buying, selling, or just wondering - and get a straight answer on what makes sense next. In English or in Spanish.</p>
     <div class="final-cta-row">
@@ -456,9 +691,10 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
       <h4>How I help</h4>
       <ul>
         <li><a href="#programs">First-time buyers</a></li>
-        <li><a href="#programs">Sellers</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#guide">Free buyer's roadmap</a></li>
         <li><a href="#tools">Home valuation</a></li>
-        <li><a href="#tools">Home search</a></li>
+        <li><a href="#faq">Buyer FAQ</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -491,8 +727,71 @@ footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 3
 </footer>
 
 <script>
+/* ----- reveal on scroll ----- */
 const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.14});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ----- sticky nav shrink / background on scroll ----- */
+const nav=document.getElementById('nav');
+const onScroll=()=>{if(window.scrollY>40){nav.classList.add('scrolled')}else{nav.classList.remove('scrolled')}};
+window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* ----- mobile hamburger menu ----- */
+const navToggle=document.getElementById('navToggle');
+const navBackdrop=document.getElementById('navBackdrop');
+const navLinks=document.getElementById('navLinks');
+const closeMenu=()=>{document.body.classList.remove('menu-open');navToggle.setAttribute('aria-expanded','false');navToggle.setAttribute('aria-label','Open menu')};
+navToggle.addEventListener('click',()=>{
+  const open=document.body.classList.toggle('menu-open');
+  navToggle.setAttribute('aria-expanded',open?'true':'false');
+  navToggle.setAttribute('aria-label',open?'Close menu':'Open menu');
+});
+navBackdrop.addEventListener('click',closeMenu);
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+window.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+
+/* ----- count-up animation ----- */
+const easeOut=t=>1-Math.pow(1-t,3);
+const runCount=el=>{
+  const to=parseFloat(el.dataset.to);
+  const suffix=el.dataset.suffix||'';
+  const dur=1400;const start=performance.now();
+  const step=now=>{
+    const p=Math.min((now-start)/dur,1);
+    const val=Math.round(easeOut(p)*to);
+    el.textContent=val+suffix;
+    if(p<1)requestAnimationFrame(step);else el.textContent=to+suffix;
+  };
+  requestAnimationFrame(step);
+};
+const countIO=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){runCount(e.target);countIO.unobserve(e.target)}})},{threshold:0.5});
+document.querySelectorAll('.count').forEach(el=>countIO.observe(el));
+
+/* ----- FAQ accordion ----- */
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q');
+  const a=item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(other=>{
+      if(other!==item){other.classList.remove('open');other.querySelector('.faq-a').style.maxHeight=null}
+    });
+    if(isOpen){item.classList.remove('open');a.style.maxHeight=null}
+    else{item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px'}
+  });
+});
+
+/* ----- lead-magnet language toggle ----- */
+const langEn=document.getElementById('langEn');
+const langEs=document.getElementById('langEs');
+const coverTitle=document.getElementById('coverTitle');
+const magnetBtn=document.getElementById('magnetBtn');
+if(langEn&&langEs){
+  const setEn=()=>{langEn.classList.add('active');langEs.classList.remove('active');coverTitle.innerHTML='The Austin <em>First-Time Buyer’s</em> Roadmap';magnetBtn.innerHTML='<iconify-icon icon="mdi:download"></iconify-icon>Send me the roadmap'};
+  const setEs=()=>{langEs.classList.add('active');langEn.classList.remove('active');coverTitle.innerHTML='La Guía del <em>Comprador Primerizo</em> en Austin';magnetBtn.innerHTML='<iconify-icon icon="mdi:download"></iconify-icon>Envíenme la guía'};
+  langEn.addEventListener('click',setEn);
+  langEs.addEventListener('click',setEs);
+}
 </script>
 </body>
 </html>
