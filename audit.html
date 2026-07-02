@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Visibility &amp; Bilingual Growth Audit &middot; Javier Melendez</title>
+<meta name="description" content="Website visibility and bilingual growth audit for Alvaro 'Javier' Melendez, eXp Realty Austin. Prepared by AG1 Consulting.">
+<meta name="theme-color" content="#17140f">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#17140f;
+  --ink-deep:#100d09;
+  --ink-elev:#221c14;
+  --terra:#c9642f;
+  --terra-bright:#e28a4f;
+  --terra-deep:#a44e22;
+  --amber:#e0a458;
+  --sky:#5b7f8c;
+  --cream:#f8f1e6;
+  --sand:#ddceb6;
+  --text:#f8f1e6;
+  --text-muted:#b8a993;
+  --text-dim:#82725f;
+  --border:rgba(221,206,182,0.16);
+  --border-bright:rgba(226,138,79,0.42);
+  --terra-soft:rgba(201,100,47,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--ink-deep);color:var(--text);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+iconify-icon{display:inline-block;vertical-align:-0.125em}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 15% 0%,rgba(201,100,47,0.08),transparent 55%),radial-gradient(ellipse 60% 50% at 90% 100%,rgba(91,127,140,0.06),transparent 55%);pointer-events:none;z-index:0}
+
+/* ===== DEMO RIBBON ===== */
+.demo-ribbon{background:var(--terra-soft);border-bottom:1px solid var(--border-bright);text-align:center;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra-bright);padding:8px 16px;position:relative;z-index:120}
+
+/* ===== TOP BAR ===== */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(16,13,9,0.88);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+.topbar-inner{max-width:1080px;margin:0 auto;padding:13px 28px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.topbar .logo{font-family:'Fraunces',serif;font-weight:600;font-size:19px;letter-spacing:0.01em;color:var(--cream);display:flex;align-items:baseline;gap:8px}
+.topbar .logo .em{color:var(--terra-bright)}
+.topbar .logo .sub{font-size:8px;color:var(--terra);letter-spacing:0.28em;font-weight:600;text-transform:uppercase;margin-left:2px}
+.topbar-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.tb-link{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border:1px solid var(--border-bright);border-radius:3px;font-size:10px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;color:var(--cream);transition:all 0.25s;background:transparent}
+.tb-link:hover{background:var(--terra-soft);border-color:var(--terra-bright)}
+.tb-link.primary{background:var(--terra);color:var(--ink-deep);border-color:var(--terra)}
+.tb-link.primary:hover{background:var(--terra-bright)}
+.tb-link iconify-icon{font-size:15px}
+
+/* ===== COVER ===== */
+.cover{position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.cover-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1531218150217-54595bc2b934?w=2400&q=80');background-size:cover;background-position:center;filter:saturate(1.03)}
+.cover-ov{position:absolute;inset:0;background:linear-gradient(120deg,rgba(16,13,9,0.95) 0%,rgba(16,13,9,0.82) 55%,rgba(23,20,15,0.62) 100%)}
+.cover-ov::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 55% at 22% 75%,rgba(201,100,47,0.16),transparent 62%)}
+.cover-inner{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:82px 28px 74px}
+.cover-eyebrow{display:inline-flex;align-items:center;gap:11px;padding:8px 17px;border:1px solid var(--border-bright);border-radius:100px;background:var(--terra-soft);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--terra-bright);margin-bottom:30px;font-weight:600}
+.cover-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--terra-bright);box-shadow:0 0 8px var(--terra-bright)}
+.cover h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(38px,5.4vw,66px);line-height:1.02;letter-spacing:-0.01em;color:var(--cream);margin-bottom:22px;max-width:20ch}
+.cover h1 em{color:var(--terra-bright);font-style:italic;font-weight:600}
+.cover-divider{width:96px;height:2px;background:var(--terra);margin:20px 0 28px;opacity:0.85}
+.cover-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:22px;max-width:760px;margin-top:8px}
+.cover-meta div .k{font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--terra);margin-bottom:7px}
+.cover-meta div .v{font-family:'Fraunces',serif;font-size:19px;color:var(--cream);font-weight:600;line-height:1.25}
+.cover-meta div .v small{display:block;font-family:'Inter',sans-serif;font-size:12px;color:var(--text-muted);font-weight:400;margin-top:3px;letter-spacing:0.02em}
+
+/* ===== DOC BODY ===== */
+.doc{max-width:840px;margin:0 auto;padding:70px 28px 40px;position:relative;z-index:1}
+.doc section{margin-bottom:14px;scroll-margin-top:80px}
+.sec-num{display:inline-flex;align-items:center;gap:12px;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:var(--terra);font-weight:600;margin:56px 0 14px}
+.sec-num::before{content:'';width:26px;height:1px;background:var(--terra)}
+.doc h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(28px,3.6vw,42px);line-height:1.08;letter-spacing:-0.01em;color:var(--cream);margin-bottom:22px}
+.doc h2 em{color:var(--terra-bright);font-style:italic}
+.doc h3{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(19px,2.1vw,24px);color:var(--cream);margin:34px 0 14px;line-height:1.25}
+.doc h4{font-family:'Inter',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra-bright);margin:28px 0 12px}
+.doc p{font-size:16.5px;color:var(--text-muted);line-height:1.8;margin-bottom:18px;font-weight:300}
+.doc p strong,.doc li strong{color:var(--cream);font-weight:600}
+.doc .lead{font-size:18px;color:var(--sand)}
+.doc ul,.doc ol{margin:0 0 20px 2px;padding-left:0;list-style:none;display:grid;gap:12px}
+.doc ul li{position:relative;padding-left:30px;font-size:16px;color:var(--text-muted);line-height:1.72;font-weight:300}
+.doc ul li::before{content:'';position:absolute;left:6px;top:11px;width:7px;height:7px;background:var(--terra);transform:rotate(45deg);box-shadow:0 0 8px rgba(201,100,47,0.4)}
+.doc ol{counter-reset:li;gap:14px}
+.doc ol li{position:relative;padding-left:44px;font-size:16px;color:var(--text-muted);line-height:1.72;font-weight:300;counter-increment:li}
+.doc ol li::before{content:counter(li);position:absolute;left:0;top:1px;width:28px;height:28px;border-radius:50%;background:var(--terra-soft);border:1px solid var(--border-bright);color:var(--terra-bright);font-family:'Fraunces',serif;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center}
+.doc hr{border:0;border-top:1px solid var(--border);margin:52px 0}
+
+/* callout / score */
+.score-card{display:flex;align-items:center;gap:26px;flex-wrap:wrap;background:linear-gradient(150deg,var(--ink-elev),var(--ink));border:1px solid var(--border-bright);border-radius:8px;padding:30px 34px;margin:30px 0}
+.score-dial{flex-shrink:0;text-align:center}
+.score-dial .num{font-family:'Fraunces',serif;font-size:52px;color:var(--terra-bright);font-weight:600;line-height:1}
+.score-dial .den{font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dim);margin-top:6px}
+.score-card .score-text{flex:1;min-width:220px}
+.score-card .score-text p{margin:0;font-size:15.5px}
+.score-card .score-text strong{color:var(--cream)}
+
+.note{background:rgba(34,28,20,0.5);border-left:2px solid var(--terra);border-radius:0 6px 6px 0;padding:16px 22px;margin:22px 0;font-size:14px;color:var(--text-dim);font-style:italic;line-height:1.7}
+.note strong{color:var(--text-muted);font-style:normal}
+
+blockquote{border-left:2px solid var(--border-bright);background:var(--terra-soft);border-radius:0 6px 6px 0;padding:20px 26px;margin:26px 0}
+blockquote p{margin:0;font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--cream);line-height:1.5;font-weight:400}
+
+.fix{display:block;margin-top:8px;padding-left:0;font-size:15.5px;color:var(--sand)}
+.fix strong{color:var(--terra-bright);font-weight:600}
+
+/* tables */
+.tbl-wrap{overflow-x:auto;margin:26px 0;border:1px solid var(--border);border-radius:8px}
+table{width:100%;border-collapse:collapse;min-width:520px}
+thead th{background:rgba(34,28,20,0.7);font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra-bright);font-weight:600;text-align:left;padding:15px 20px;border-bottom:1px solid var(--border-bright)}
+tbody td{padding:14px 20px;font-size:14.5px;color:var(--text-muted);border-bottom:1px solid var(--border);vertical-align:top;font-weight:300;line-height:1.6}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:nth-child(even) td{background:rgba(34,28,20,0.3)}
+tbody td:first-child{color:var(--cream);font-weight:500}
+tbody td strong{color:var(--terra-bright);font-weight:600}
+.tag-open{color:var(--terra-bright);font-weight:600}
+
+/* tier grid */
+.tier-list{display:grid;gap:14px;margin:24px 0}
+.tier{border:1px solid var(--border);border-radius:8px;padding:24px 26px;background:linear-gradient(160deg,var(--ink-elev),var(--ink-deep));transition:all 0.3s}
+.tier:hover{border-color:var(--border-bright);transform:translateY(-3px)}
+.tier.rec{border-color:var(--terra);box-shadow:0 0 0 1px var(--terra) inset}
+.tier .tt{font-family:'Fraunces',serif;font-size:20px;color:var(--cream);font-weight:600;margin-bottom:8px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.tier .badge{font-family:'Inter',sans-serif;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-deep);background:var(--terra);padding:4px 10px;border-radius:100px;font-weight:700}
+.tier p{margin:0;font-size:15px}
+
+/* footer */
+.doc-footer{max-width:840px;margin:0 auto;padding:44px 28px 80px;border-top:1px solid var(--border);text-align:center;position:relative;z-index:1}
+.doc-footer .ff-logo{font-family:'Fraunces',serif;font-weight:600;font-size:20px;color:var(--cream);margin-bottom:10px}
+.doc-footer .ff-logo .em{color:var(--terra-bright)}
+.doc-footer p{font-size:13px;color:var(--text-dim);line-height:1.7;font-style:italic}
+.doc-footer .back-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+
+@media(max-width:600px){
+  .doc{padding:48px 22px 30px}
+  .cover-inner{padding:60px 22px 54px}
+  .topbar-inner{padding:11px 20px}
+  .tb-link{padding:8px 12px;font-size:9px}
+}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">Confidential audit prepared for Javier Melendez &middot; AG1 Consulting &middot; not an official eXp document</div>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="#top" class="logo"><span class="em">Javier</span> Melendez<span class="sub">Growth Audit</span></a>
+    <div class="topbar-links">
+      <a href="index.html" class="tb-link"><iconify-icon icon="mdi:monitor-dashboard"></iconify-icon>View demo site</a>
+      <a href="https://andrei170.github.io/austin-agents-demos-site" class="tb-link" target="_blank" rel="noopener"><iconify-icon icon="mdi:view-grid-outline"></iconify-icon>Hub</a>
+      <a href="index.html#contact" class="tb-link primary"><iconify-icon icon="mdi:phone-in-talk-outline"></iconify-icon>Book strategy call</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== COVER ===== -->
+<header class="cover" id="top">
+  <div class="cover-bg"></div>
+  <div class="cover-ov"></div>
+  <div class="cover-inner">
+    <div class="cover-eyebrow"><span class="dot"></span>Se habla espa&ntilde;ol &middot; Austin, TX metro</div>
+    <h1>Website Visibility &amp; <em>Bilingual Growth</em> Audit</h1>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      <div><div class="k">Prepared for</div><div class="v">Alvaro "Javier" Melendez<small>eXp Realty &middot; TREC #759500</small></div></div>
+      <div><div class="k">Prepared by</div><div class="v">AG1 Consulting<small>Andrei Givero</small></div></div>
+      <div><div class="k">Date</div><div class="v">July 2, 2026<small>Confidential</small></div></div>
+      <div><div class="k">Market</div><div class="v">Austin metro<small>11 Central Texas cities</small></div></div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== DOC ===== -->
+<main class="doc">
+
+  <!-- 1 EXEC SUMMARY -->
+  <section id="summary">
+    <div class="sec-num">01</div>
+    <h2>Executive Summary</h2>
+    <p class="lead">Javier Melendez already has more online than most Austin agents at his stage: a real multi-page site (workwithjavi.com), a home-valuation tool, IDX search, a YouTube vlog, and profiles across every platform. The foundation is real and worth defending.</p>
+    <p>The problem is positioning, not presence. The single thing that would make Javier un-copyable in Austin, a genuinely bilingual, Austin-raised agent who can run an entire transaction, contracts to closing, in Spanish for the metro's roughly one-third Hispanic population, is nowhere near the front of his brand. His current homepage headline, "Austin Real Estate Expert," is the exact phrase every one of the ~17,000-plus agents in the metro can claim, on the most crowded search term in the market. He is competing on the one word where he cannot win, and hiding the one advantage no competitor can copy.</p>
+    <p>This is not a "you are invisible" audit. It is a "you own a bilingual, Austin-native advantage that your own website is burying" audit. The fixes are surgical: lead with the bilingual, Austin-raised story; turn "good with first-timers" into a named, step-by-step program; and build a visible proof spine and a lead-capture funnel so browsers who are not ready today are followed up instead of lost.</p>
+    <div class="score-card">
+      <div class="score-dial"><div class="num">31<span style="font-size:26px;color:var(--text-dim)">/50</span></div><div class="den">Current audit score</div></div>
+      <div class="score-text"><p><strong>The ceiling with the rebuild and 90-day plan below is A-tier.</strong> The gap between today's score and that ceiling is almost entirely positioning and capture, not effort already spent.</p></div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- 2 OPPORTUNITY -->
+  <section id="opportunity">
+    <div class="sec-num">02</div>
+    <h2>The Opportunity</h2>
+    <h3>The Austin metro real estate market</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Signal</th><th>Figure</th></tr></thead>
+        <tbody>
+          <tr><td>Austin-Round Rock-San Marcos metro population</td><td>~2.4 million</td></tr>
+          <tr><td>Hispanic / Latino share of Austin metro</td><td>~33% (nearly one-third; Travis County ~32.5%), projected to reach ~47% by 2060</td></tr>
+          <tr><td>Median metro sale price (Oct 2025)</td><td>~$439,000</td></tr>
+          <tr><td>Median sale price, City of Austin (Nov 2025)</td><td>~$565,000</td></tr>
+          <tr><td>Monthly closed sales, metro (Oct 2025)</td><td>~2,238 homes</td></tr>
+          <tr><td>Licensed agents in the Austin area</td><td>~17,000-plus (some counts cite ~27,000 license holders metro-wide)</td></tr>
+          <tr><td>Home buyers who use the internet during their search</td><td>100%</td></tr>
+          <tr><td>Buyers whose first step is searching online</td><td>~44-47%</td></tr>
+          <tr><td>Buyers who ultimately purchase through an agent</td><td>~88%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note"><strong>Sources:</strong> Unlock MLS / Austin Board of REALTORS Central Texas Housing Report; U.S. Census / Travis County demographics; Opportunity Austin projections; NAR 2025 Profile of Home Buyers and Sellers; TREC / ABoR agent-count reporting. Figures rounded and directional; live-deal specifics to be confirmed with Javier.</div>
+
+    <h3>What this means in plain terms</h3>
+    <ol>
+      <li><strong>A one-third-Hispanic market is under-served at the transaction level.</strong> Nearly one in three Austin-metro residents is Hispanic, and a large share of first-time and investor buyers want an agent who can run the <em>whole</em> deal, contracts, negotiation, lender calls, closing, in Spanish. Most agents can only hand a Spanish-speaking family off to a translator halfway through the biggest purchase of their life. Javier does the opposite. That is a structurally rare, high-trust position, and it is currently invisible on his site.</li>
+      <li><strong>The buyer's journey starts, but does not end, online.</strong> 100% of buyers use the internet, and for ~44-47% online search is literally the first step, but ~88% still close through an agent. That gap is the whole game: the website's job is not to replace Javier, it is to win the online-first stage and convert that attention into a booked conversation with him. Right now the site attracts, but does not capture.</li>
+      <li><strong>~17,000-plus agents compete on the same generic phrase.</strong> In a market this saturated, "Austin real estate expert" is undifferentiated noise. The buyer scanning a Zillow list or an AI answer needs a reason to pick <em>this</em> name. Javier has one, bilingual, Austin-raised, first-time-buyer specialist, and the current site throws it away.</li>
+    </ol>
+
+    <h3>The revenue frame (directional, conservative)</h3>
+    <ul>
+      <li>Even a small share of the ~2,238 monthly metro closings, at a ~$439K median and standard buyer-side commission, represents a meaningful book of business.</li>
+      <li>The bilingual angle is not a nice-to-have; it is a wedge into a one-third slice of the market that most competitors cannot serve at full-transaction depth.</li>
+      <li>The realistic near-term prize is not "rank #1 for Austin realtor." It is: become the obvious, trusted, bilingual first-time-buyer choice for the Spanish-speaking and first-generation buyers already searching, and capture them before a competitor does.</li>
+    </ul>
+    <div class="note"><strong>To confirm:</strong> exact volume, homes closed, and GCI to be confirmed with Javier. No income or production claims are printed on the demo site; all such figures are placeholder-flagged.</div>
+  </section>
+
+  <hr>
+
+  <!-- 3 CURRENT STATE -->
+  <section id="audit">
+    <div class="sec-num">03</div>
+    <h2>Current-State Audit</h2>
+    <p>Javier has real assets. The issue is that they are arranged to compete on the wrong axis. Below, each of the six core vulnerabilities is expanded with specifics.</p>
+
+    <h4>What is working (defend these)</h4>
+    <ul>
+      <li><strong>Real site with real tools.</strong> Home valuation + IDX search + neighborhoods = more useful than most agent sites at his stage.</li>
+      <li><strong>First-time-buyer proof is authentic.</strong> All three published testimonials (Debanhi S., Jinky R., Karina) are first-time buyers who felt guided. That is a clear, believable niche.</li>
+      <li><strong>Origin story is a genuine differentiator.</strong> Jalisco to Chicago to Austin, 12-plus years local, Texas State advertising background. Trust equity most agents cannot manufacture.</li>
+    </ul>
+
+    <h3>Vulnerability 1 &middot; The bilingual advantage is buried</h3>
+    <p>"Habla Espanol" currently reads as a small note, not the spine of the brand. In a metro that is ~33% Hispanic, the ability to run the entire transaction in Spanish is the single strongest, rarest trust signal Javier owns, and the homepage headline ("Austin Real Estate Expert") discards it to compete on the most crowded phrase in the market.</p>
+    <p class="fix"><strong>Fix:</strong> lead the hero, the trust band, and a dedicated Spanish-language section with the bilingual, Austin-raised story. (Done in the demo: hero headline "Your Austin agent, in your language, on your side," a full bilingual feature section, a Spanish-language lead magnet, and a Spanish FAQ answer.)</p>
+
+    <h3>Vulnerability 2 &middot; Generic headline, generic positioning</h3>
+    <p>"Austin Real Estate Expert" is a phrase all ~17,000-plus metro agents can claim. Nothing about the current hero tells a buyer why Javier over the next name in the Zillow list, no packaged niche, no named program, no "this is who I am for."</p>
+    <p class="fix"><strong>Fix:</strong> a specific, ownable position (bilingual, first-time-buyer specialist) plus a named process. (Done in the demo: the "First Home, Done Right" program and a four-step "How it works" process from strategy call to keys.)</p>
+
+    <h3>Vulnerability 3 &middot; Proof is thin and self-published</h3>
+    <p>Roughly six portfolio properties and three testimonials, all self-hosted. No aggregate track-record framing, no visible Google or Zillow star rating pulled onto the site, no "homes closed / families served" counter. Buyers scan for proof in seconds and there is not much to scan.</p>
+    <p class="fix"><strong>Fix:</strong> a proof spine, a track-record band (years local, cities covered, families served), real reviews surfaced, and animated stat counters. (Done in the demo: animated count-up trust band and a credential bar; the "families guided" and "client rating" tiles are placeholder-flagged pending Javier's real numbers.)</p>
+
+    <h3>Vulnerability 4 &middot; Unbranded email undercuts a paid domain</h3>
+    <p>The public contact email is a personal Gmail even though Javier owns workwithjavi.com. A javier@workwithjavi.com address is a free, five-minute credibility upgrade and a real trust signal on every reply, form receipt, and nurture email. Small thing, real signal.</p>
+    <p class="fix"><strong>Fix:</strong> stand up a branded domain email and route all lead-capture and nurture through it.</p>
+
+    <h3>Vulnerability 5 &middot; The vlog is an asset that is switched off</h3>
+    <p>A YouTube channel and an on-site Vlog page exist, but the page reads as dormant, no embedded, current content driving views into leads. Video is the highest-trust format in real estate and it is sitting idle instead of feeding the funnel.</p>
+    <p class="fix"><strong>Fix:</strong> reactivate with a lightweight, repeatable cadence (neighborhood tours, first-time-buyer explainers, a Spanish-language series) embedded on-site as social proof and top-of-funnel. (See the 90-Day Plan, Month 3.)</p>
+
+    <h3>Vulnerability 6 &middot; Lead capture is passive</h3>
+    <p>Forms and a valuation tool are present, but there is no lead magnet, no instant response, and no visible nurture. A browser who is not ready today leaves with nothing and is never followed up. In a market where the buyer's journey starts online but closes with an agent, that is the single most expensive leak.</p>
+    <p class="fix"><strong>Fix:</strong> an active capture layer, a free "Austin First-Time Buyer's Roadmap" (English and Spanish), name + email capture, and an automated nurture sequence into a booked showing. (Done in the demo: a styled lead-magnet section with a language toggle and demo capture form.)</p>
+  </section>
+
+  <hr>
+
+  <!-- 4 COMPETITOR -->
+  <section id="landscape">
+    <div class="sec-num">04</div>
+    <h2>Competitor &amp; Discoverability Landscape</h2>
+    <h3>How Javier shows up today vs. the market</h3>
+    <p>When a buyer searches "Austin realtor," "Austin real estate agent," or "best realtor in Austin," they get the same crowded field every agent competes in: brokerage mega-sites (eXp, Compass, Keller Williams), portal profiles (Zillow, Realtor.com, HAR), and the handful of personal-brand agents who have invested in SEO and content. Javier's generic "Austin Real Estate Expert" positioning drops him into that undifferentiated pool with ~17,000-plus other license holders, a fight he cannot win on the head term.</p>
+
+    <h3>Where he can win instead</h3>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Query universe</th><th>Today</th><th>The opening</th></tr></thead>
+        <tbody>
+          <tr><td>"Austin realtor" (head term)</td><td>Lost in ~17K-agent noise</td><td>Do not fight here; unwinnable</td></tr>
+          <tr><td>"Bilingual realtor Austin" / "agente de bienes raices Austin"</td><td>Not positioned</td><td><strong>Open, ownable, high-intent</strong></td></tr>
+          <tr><td>"Se habla espanol realtor Austin / Round Rock"</td><td>Not positioned</td><td><strong>Open, one-third of the metro</strong></td></tr>
+          <tr><td>"First-time home buyer agent Austin"</td><td>Implicit, not packaged</td><td><strong>Winnable with named program + magnet</strong></td></tr>
+          <tr><td>"Realtor [suburb]" (Round Rock, Georgetown, Leander, etc.)</td><td>No dedicated city pages</td><td>Winnable with per-city content</td></tr>
+          <tr><td>AI answer engines ("who is a good bilingual Austin agent for first-time buyers?")</td><td>Unlikely to be named</td><td>Winnable with structured, credential-rich content</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The strategic read</h3>
+    <p>Javier does not need to out-spend the brokerage sites or out-rank the portals on the head term. He needs to <strong>own a narrower, higher-intent lane</strong>, bilingual, first-time-buyer, per-suburb, where the competition is thin and the buyer is ready. The bilingual angle in particular is a moat: most competitors <em>cannot</em> replicate it even if they wanted to.</p>
+  </section>
+
+  <hr>
+
+  <!-- 5 90-DAY PLAN -->
+  <section id="plan">
+    <div class="sec-num">05</div>
+    <h2>The 90-Day Plan</h2>
+
+    <h3>Month 1 &middot; Foundation &amp; positioning</h3>
+    <ul>
+      <li>Rebuild the homepage to lead with the bilingual, Austin-raised story (per the demo) and a named first-time-buyer program.</li>
+      <li>Stand up branded domain email (javier@workwithjavi.com) and route all capture + replies through it.</li>
+      <li>Deploy the lead magnet: "Austin First-Time Buyer's Roadmap" in English and Spanish, with name + email capture.</li>
+      <li>Technical SEO pass: title tags, meta descriptions, Open Graph, LocalBusiness + Person schema surfacing the TREC license, eXp affiliation, bilingual capability, and service areas. Search Console + Bing Webmaster wiring.</li>
+      <li>Confirm and surface real proof numbers (families served, rating) to replace demo placeholders.</li>
+    </ul>
+
+    <h3>Month 2 &middot; Bilingual funnel &amp; city coverage</h3>
+    <ul>
+      <li>Build the Spanish-language path: a dedicated en-espanol landing experience, Spanish nurture sequence, and Spanish-language versions of the magnet and key pages.</li>
+      <li>Launch per-suburb landing pages for the highest-intent cities (Round Rock, Georgetown, Leander, Cedar Park, Pflugerville, plus the north/south value belt: Hutto, Buda, Kyle, Jarrell, Taylor), each with local character, price context, and its own capture.</li>
+      <li>Wire the nurture automation: magnet download, welcome, value emails, booked-showing CTA, in the buyer's chosen language.</li>
+      <li>Reputation flywheel: a post-close review-request routine to grow visible Google/Zillow proof.</li>
+    </ul>
+
+    <h3>Month 3 &middot; Content &amp; vlog reactivation</h3>
+    <ul>
+      <li>Reactivate the vlog on a lightweight, repeatable cadence: neighborhood tours, first-time-buyer explainers, and a Spanish-language series (the under-served, high-differentiation angle).</li>
+      <li>Embed current video on-site as social proof and top-of-funnel; repurpose clips to Instagram (@javiermelendezatx) and YouTube.</li>
+      <li>Publish a small library of buyer-education posts targeting the winnable query lanes (bilingual, first-time, per-suburb) to feed both traditional and AI search.</li>
+      <li>First full performance dashboard and strategy review; set the next-quarter roadmap.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 6 WEBSITE SPEC -->
+  <section id="spec">
+    <div class="sec-num">06</div>
+    <h2>The Website Specification</h2>
+    <p><strong>Tier 1 &middot; Positioning &amp; brand.</strong> Espresso + terracotta palette and Fraunces + Inter typography retained. Hero leads with the bilingual, Austin-raised, on-your-side story. A named first-time-buyer program with real steps.</p>
+    <p><strong>Tier 2 &middot; Proof spine.</strong> Animated count-up trust band (years local, cities covered, families served), credential bar (eXp, TREC #759500, bilingual, Texas State), real testimonials surfaced, and Google/Zillow rating pulled in once confirmed.</p>
+    <p><strong>Tier 3 &middot; Bilingual architecture.</strong> A dedicated Spanish-language section and path, Spanish FAQ answers, and a Spanish version of the lead magnet, so a Spanish-speaking buyer never feels like an afterthought.</p>
+    <p><strong>Tier 4 &middot; Conversion layer.</strong> Lead magnet with name + email capture and language toggle, "How it works" process section, buyer FAQ accordion, valuation and IDX search tools carried forward, and a clear primary CTA (strategy call) throughout.</p>
+    <p><strong>Tier 5 &middot; Technical &amp; local SEO.</strong> LocalBusiness + Person schema with license and credential stack, per-suburb landing pages, clean meta/OG, sitemap, and branded email.</p>
+    <p><strong>Tier 6 &middot; Polish.</strong> Sticky nav that shrinks and gains background on scroll, working mobile hamburger menu, hover states on all cards, section-divider motif, refined spacing and mobile breakpoints, tasteful Austin/home imagery, and a placeholder-flagged headshot slot for Javier's real photo.</p>
+    <div class="note">Tiers 1, 2, 4, and 6 are demonstrated live in the enclosed concept redesign; Tiers 3 and 5 are specified for the full build.</div>
+  </section>
+
+  <hr>
+
+  <!-- 7 FUNNEL -->
+  <section id="funnel">
+    <div class="sec-num">07</div>
+    <h2>The Lead-Gen Funnel</h2>
+    <p class="lead"><strong>Magnet, Nurture, Booked showing.</strong></p>
+    <ol>
+      <li><strong>Magnet.</strong> A buyer searching online lands on the site or a suburb page and downloads the free "Austin First-Time Buyer's Roadmap" (English or Spanish) in exchange for name + email. This converts anonymous, not-ready-today browsers into known contacts.</li>
+      <li><strong>Instant delivery + welcome.</strong> The PDF is delivered instantly from the branded domain email, with a warm welcome that sets Javier as the trusted, bilingual guide.</li>
+      <li><strong>Nurture sequence.</strong> A short automated series in the buyer's chosen language: what to expect, down-payment and first-time-buyer program myths, city fit, and social proof (testimonials, vlog clips), each ending with a soft invitation to book a strategy call.</li>
+      <li><strong>Booked showing.</strong> The CTA throughout points to one low-friction action: a free, no-pressure strategy call. That call is the top of Javier's real, four-step process (strategy call, tours, offer/negotiation, keys).</li>
+      <li><strong>Reputation loop.</strong> After closing, an automated review request feeds the visible proof spine, which lifts search visibility and warms the next cohort.</li>
+    </ol>
+    <p>The result is a system, not a hope: every online-first browser is captured, nurtured in their language, and routed to a booked conversation with Javier.</p>
+  </section>
+
+  <hr>
+
+  <!-- 8 KPIs -->
+  <section id="kpis">
+    <div class="sec-num">08</div>
+    <h2>KPIs &amp; Reporting</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>KPI</th><th>Baseline</th><th>30-day</th><th>60-day</th><th>90-day</th></tr></thead>
+        <tbody>
+          <tr><td>Bilingual / "se habla espanol" query visibility</td><td>Not positioned</td><td>Live</td><td>Ranking</td><td>Owning the lane</td></tr>
+          <tr><td>Lead-magnet downloads / month</td><td>0</td><td>First cohort</td><td>Growing</td><td>Steady inbound</td></tr>
+          <tr><td>Captured email contacts</td><td>~0</td><td>Building list</td><td>Nurtured list</td><td>Segmented EN/ES lists</td></tr>
+          <tr><td>Per-suburb landing pages live</td><td>0</td><td>2-3</td><td>5-6</td><td>Full set</td></tr>
+          <tr><td>Strategy calls booked from site</td><td>TBD (confirm)</td><td>+baseline</td><td>+growth</td><td>+meaningful lift</td></tr>
+          <tr><td>Visible reviews (Google / Zillow)</td><td>TBD (confirm)</td><td>+requests live</td><td>+new reviews</td><td>+compounding</td></tr>
+          <tr><td>Vlog cadence / on-site embeds</td><td>Dormant</td><td>Reactivated</td><td>Regular</td><td>Repurposed to IG/YT</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">Baselines marked TBD to be confirmed with Javier before kickoff. Targets are directional and set jointly at the strategy call.</div>
+  </section>
+
+  <hr>
+
+  <!-- 9 RISK REVERSAL -->
+  <section id="risk">
+    <div class="sec-num">09</div>
+    <h2>Risk Reversal</h2>
+    <ul>
+      <li><strong>Foundation work is fixed-scope, fixed-fee, guaranteed delivery.</strong> You know exactly what you get and what it costs before anything starts.</li>
+      <li><strong>Performance-based framing on the growth layer.</strong> The bilingual-funnel and lead-gen work can be structured so that a portion is tied to agreed outcomes (captured leads, booked calls) rather than paid flat up front, so incentives are aligned and risk is shared.</li>
+      <li><strong>No lock-in on the brand.</strong> The espresso + terracotta identity, the copy, and the assets are Javier's. Everything is built on his own domain and email, under his control.</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 10 INVESTMENT -->
+  <section id="investment">
+    <div class="sec-num">10</div>
+    <h2>Investment Framing</h2>
+    <p>Engagement is structured in tiers, scaled to how much of the system Javier wants built at once:</p>
+    <div class="tier-list">
+      <div class="tier">
+        <div class="tt">Foundation tier</div>
+        <p>Homepage rebuild, positioning, lead magnet, branded email, core technical SEO. Fixed scope, fixed fee.</p>
+      </div>
+      <div class="tier rec">
+        <div class="tt">Growth tier <span class="badge">Recommended</span></div>
+        <p>Foundation plus the full bilingual funnel, per-suburb pages, nurture automation, and reputation flywheel. Can include a performance-based component tied to captured leads and booked calls.</p>
+      </div>
+      <div class="tier">
+        <div class="tt">Authority tier</div>
+        <p>Growth plus vlog reactivation, ongoing content, AI-search optimization, and monthly reporting/strategy.</p>
+      </div>
+    </div>
+    <p>Specific pricing is set at the strategy call, once Javier's real numbers and goals are on the table. Performance-based structures are available for the growth and authority layers.</p>
+  </section>
+
+  <hr>
+
+  <!-- 11 WHY NOW -->
+  <section id="whynow">
+    <div class="sec-num">11</div>
+    <h2>Why Now</h2>
+    <ol>
+      <li><strong>The bilingual lane is open and un-owned.</strong> No dominant Austin personal-brand agent is credibly positioned as the full-transaction bilingual choice for the metro's one-third Hispanic market. Whoever claims it first, keeps it.</li>
+      <li><strong>Search is shifting to AI answers.</strong> The agents whose sites are structured, credential-rich, and specific get named in AI answers; generic "Austin expert" pages do not. Building the structured, bilingual, first-time-buyer content now compounds for years.</li>
+      <li><strong>Javier already paid for the foundation.</strong> The site, tools, testimonials, and vlog are sunk cost. Sharpening the positioning and adding the capture layer is high-leverage: it turns existing assets into a system instead of leaving them idle.</li>
+      <li><strong>The market rewards the specific.</strong> In a ~17,000-agent metro with 100% of buyers online and ~88% closing through an agent, the differentiated, trusted, capture-ready agent wins the online-first stage. That is a winnable fight, on the right terms.</li>
+    </ol>
+  </section>
+
+  <hr>
+
+  <!-- 12 NEXT STEPS -->
+  <section id="next">
+    <div class="sec-num">12</div>
+    <h2>Next Steps</h2>
+    <ol>
+      <li><strong>30-minute strategy call.</strong> Confirm real numbers (families served, rating, production), pick the tier, and set joint 90-day targets.</li>
+      <li><strong>Roadmap within 5 business days</strong> of the call.</li>
+      <li><strong>Kickoff:</strong> homepage rebuild + lead magnet + branded email go first, so the capture layer is live within Month 1.</li>
+    </ol>
+    <blockquote><p>"You should not have to choose between a great agent and one who speaks your language. Here you get both." That is the brand. Let's put it at the front.</p></blockquote>
+    <div class="back-btns" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+      <a href="index.html" class="tb-link"><iconify-icon icon="mdi:monitor-dashboard"></iconify-icon>View the concept redesign</a>
+      <a href="index.html#contact" class="tb-link primary"><iconify-icon icon="mdi:phone-in-talk-outline"></iconify-icon>Book the strategy call</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="doc-footer">
+  <div class="ff-logo"><span class="em">AG1</span> Consulting</div>
+  <p>Confidential. Prepared exclusively for Alvaro "Javier" Melendez, July 2026.<br>AG1 Consulting &middot; Andrei Givero</p>
+</footer>
+
+</body>
+</html>
