@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javier Melendez &middot; Austin Realtor &middot; Se Habla Espa&ntilde;ol</title>
+<meta name="description" content="Bilingual Austin real estate agent. Born in Jalisco, raised in Austin, 12+ years local. First-time buyers, sellers, and Spanish-speaking families across Austin, Round Rock, Georgetown, Leander and Cedar Park. eXp Realty.">
+<meta name="theme-color" content="#17140f">
+<meta property="og:title" content="Javier Melendez &middot; Austin Realtor &middot; Se Habla Espa&ntilde;ol">
+<meta property="og:description" content="The Austin agent who works in your language, on your side of the deal. Born in Jalisco, raised in Austin, 12+ years local.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --ink:#17140f;
+  --ink-deep:#100d09;
+  --ink-elev:#221c14;
+  --terra:#c9642f;
+  --terra-bright:#e28a4f;
+  --terra-deep:#a44e22;
+  --amber:#e0a458;
+  --sky:#5b7f8c;
+  --cream:#f8f1e6;
+  --sand:#ddceb6;
+  --text:#f8f1e6;
+  --text-muted:#b8a993;
+  --text-dim:#82725f;
+  --border:rgba(221,206,182,0.16);
+  --border-bright:rgba(226,138,79,0.42);
+  --terra-soft:rgba(201,100,47,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',-apple-system,sans-serif;background:var(--ink-deep);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+iconify-icon{display:inline-block;vertical-align:-0.125em}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 50% at 20% 0%,rgba(201,100,47,0.09),transparent 55%),radial-gradient(ellipse 60% 50% at 85% 100%,rgba(91,127,140,0.07),transparent 55%);pointer-events:none;z-index:0}
+
+/* ===== NAV ===== */
+nav{position:fixed;top:0;left:0;right:0;padding:14px 0;background:rgba(16,13,9,0.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,0.04);z-index:100}
+.nav-inner{max-width:1320px;margin:0 auto;padding:0 28px;display:flex;justify-content:space-between;align-items:center;gap:28px}
+.logo{font-family:'Fraunces',serif;font-weight:600;font-size:23px;letter-spacing:0.01em;color:var(--cream);display:flex;align-items:baseline;gap:8px}
+.logo .em{color:var(--terra-bright)}
+.logo .sub{font-size:9px;color:var(--terra);letter-spacing:0.3em;font-weight:600;font-family:'Inter',sans-serif;text-transform:uppercase;margin-left:2px}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:0.16em;color:var(--text-muted);text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--terra-bright)}
+.nav-cta{padding:10px 22px;background:var(--terra);color:var(--ink-deep);border-radius:3px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;transition:all 0.25s}
+.nav-cta:hover{background:var(--terra-bright);transform:translateY(-1px)}
+@media(max-width:980px){.nav-links a:not(.nav-cta){display:none}}
+
+/* ===== HERO ===== */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1531218150217-54595bc2b934?w=2400&q=80');background-size:cover;background-position:center;animation:kenburns 32s ease-in-out infinite alternate;filter:saturate(1.03)}
+@keyframes kenburns{0%{transform:scale(1.0) translate(0,0)}100%{transform:scale(1.12) translate(-2%,-2%)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(100deg,rgba(16,13,9,0.92) 0%,rgba(16,13,9,0.62) 46%,rgba(23,20,15,0.28) 100%)}
+.hero-overlay::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 55% 50% at 28% 68%,rgba(201,100,47,0.16),transparent 62%)}
+.hero-inner{position:relative;z-index:2;max-width:1320px;margin:0 auto;padding:140px 28px 100px;width:100%}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:12px;padding:9px 18px;border:1px solid var(--border-bright);border-radius:100px;background:var(--terra-soft);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--terra-bright);margin-bottom:34px;font-weight:600}
+.hero-eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--terra-bright);box-shadow:0 0 8px var(--terra-bright);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(50px,7.6vw,110px);line-height:0.98;letter-spacing:-0.01em;color:var(--cream);margin-bottom:26px;max-width:16ch}
+.hero h1 em{color:var(--terra-bright);font-style:italic;font-weight:600}
+.hero-divider{width:110px;height:2px;background:var(--terra);margin:22px 0 30px;opacity:0.8}
+.hero-sub{font-size:clamp(16px,1.55vw,20px);color:var(--text-muted);max-width:56ch;margin-bottom:44px;line-height:1.7;font-weight:300}
+.hero-sub strong{color:var(--cream);font-weight:500}
+.hero-cta-row{display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.cta-primary{display:inline-flex;align-items:center;gap:10px;padding:17px 34px;background:var(--terra);color:var(--ink-deep);border-radius:3px;font-size:12px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;transition:all 0.3s;box-shadow:0 14px 34px rgba(201,100,47,0.28);border:0;cursor:pointer;font-family:inherit}
+.cta-primary:hover{background:var(--terra-bright);transform:translateY(-2px);box-shadow:0 18px 44px rgba(201,100,47,0.38)}
+.cta-ghost{display:inline-flex;align-items:center;gap:10px;padding:17px 26px;border:1px solid var(--border-bright);color:var(--cream);border-radius:3px;font-size:12px;font-weight:500;letter-spacing:0.13em;text-transform:uppercase;transition:all 0.25s;background:transparent}
+.cta-ghost:hover{background:var(--terra-soft);border-color:var(--terra-bright)}
+.hero-meta{position:absolute;bottom:56px;right:28px;z-index:2;text-align:right;max-width:320px}
+.hero-meta-label{font-size:10px;letter-spacing:0.26em;text-transform:uppercase;color:var(--terra);margin-bottom:14px}
+.hero-meta-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 22px;text-align:left}
+.hero-meta-grid dt{font-family:'Fraunces',serif;font-size:26px;color:var(--cream);line-height:1;font-weight:600}
+.hero-meta-grid dd{font-size:9px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-dim);margin-top:4px}
+@media(max-width:1080px){.hero-meta{display:none}}
+
+/* ===== SECTION DEFAULTS ===== */
+section{padding:118px 0;position:relative;z-index:1}
+.container{max-width:1320px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.container-narrow{max-width:940px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
+.section-eyebrow{font-size:11px;letter-spacing:0.26em;text-transform:uppercase;color:var(--terra);margin-bottom:18px;display:inline-flex;align-items:center;gap:14px;font-weight:600}
+.section-eyebrow::before{content:'';width:30px;height:1px;background:var(--terra)}
+.section-title{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(36px,4.7vw,64px);line-height:1.04;letter-spacing:-0.01em;color:var(--cream);margin-bottom:22px;max-width:24ch}
+.section-title em{color:var(--terra-bright);font-style:italic}
+.section-sub{font-size:17px;color:var(--text-muted);max-width:60ch;line-height:1.7;margin-bottom:46px;font-weight:300}
+.section-sub strong{color:var(--cream);font-weight:500}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== TRUST BAND ===== */
+.trust{background:var(--ink);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:72px 0}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border)}
+.stat-tile{padding:38px 20px;text-align:center;border-right:1px solid var(--border);background:rgba(34,28,20,0.4)}
+.stat-tile:last-child{border-right:0}
+.stat-num{font-family:'Fraunces',serif;font-size:clamp(34px,3.6vw,50px);color:var(--terra-bright);line-height:1;font-weight:600}
+.stat-num .small{font-size:0.5em;color:var(--amber);margin-left:2px}
+.stat-label{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-muted);margin-top:14px;line-height:1.4}
+.stat-flag{display:block;font-size:9px;color:var(--text-dim);margin-top:6px;font-style:italic;letter-spacing:0.04em;text-transform:none}
+@media(max-width:820px){.stat-grid{grid-template-columns:repeat(2,1fr)}.stat-tile:nth-child(2){border-right:0}.stat-tile:nth-child(1),.stat-tile:nth-child(2){border-bottom:1px solid var(--border)}}
+
+/* ===== BILINGUAL FEATURE ===== */
+.bilingual{background:var(--ink-deep)}
+.bl-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:64px;align-items:center}
+@media(max-width:940px){.bl-grid{grid-template-columns:1fr;gap:40px}}
+.bl-card{background:linear-gradient(150deg,var(--ink-elev),var(--ink));border:1px solid var(--border);border-radius:6px;padding:44px;position:relative;overflow:hidden}
+.bl-card::before{content:'';position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(201,100,47,0.14),transparent 70%)}
+.bl-flag{display:inline-flex;align-items:center;gap:10px;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--terra-bright);font-weight:600;margin-bottom:20px}
+.bl-quote{font-family:'Fraunces',serif;font-style:italic;font-size:clamp(22px,2.4vw,30px);color:var(--cream);line-height:1.35;margin-bottom:20px}
+.bl-quote-en{font-size:14px;color:var(--text-dim);font-style:italic}
+.bl-list{list-style:none;margin-top:30px;display:grid;gap:16px}
+.bl-list li{display:flex;gap:14px;align-items:flex-start;font-size:15px;color:var(--text-muted)}
+.bl-list iconify-icon{color:var(--terra);font-size:20px;flex-shrink:0;margin-top:2px}
+.bl-list strong{color:var(--cream);font-weight:600}
+
+/* ===== PROGRAMS ===== */
+.programs{background:var(--ink)}
+.prog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:940px){.prog-grid{grid-template-columns:1fr}}
+.prog-card{background:linear-gradient(160deg,var(--ink-elev),var(--ink-deep));border:1px solid var(--border);border-radius:6px;padding:38px 32px;transition:all 0.35s}
+.prog-card:hover{transform:translateY(-6px);border-color:var(--border-bright);box-shadow:0 30px 60px rgba(0,0,0,0.45)}
+.prog-card.featured{border-color:var(--terra);box-shadow:0 0 0 1px var(--terra) inset}
+.prog-icon{width:52px;height:52px;border-radius:10px;background:var(--terra-soft);border:1px solid var(--border-bright);display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.prog-icon iconify-icon{font-size:26px;color:var(--terra-bright)}
+.prog-tag{font-size:10px;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);font-weight:600;margin-bottom:10px}
+.prog-card h3{font-family:'Fraunces',serif;font-weight:600;font-size:24px;color:var(--cream);margin-bottom:14px}
+.prog-card p{font-size:15px;color:var(--text-muted);line-height:1.65;font-weight:300}
+.prog-steps{list-style:none;margin-top:22px;display:grid;gap:10px}
+.prog-steps li{display:flex;gap:12px;align-items:center;font-size:13px;color:var(--text-muted)}
+.prog-steps .n{width:22px;height:22px;border-radius:50%;background:var(--terra-soft);border:1px solid var(--border-bright);color:var(--terra-bright);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+
+/* ===== AREAS ===== */
+.areas{background:var(--ink-deep)}
+.area-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:16px}
+@media(max-width:820px){.area-grid{grid-template-columns:repeat(2,1fr)}}
+.area-chip{padding:22px 20px;border:1px solid var(--border);border-radius:5px;background:rgba(34,28,20,0.4);transition:all 0.25s}
+.area-chip:hover{border-color:var(--border-bright);background:var(--terra-soft);transform:translateY(-3px)}
+.area-chip .city{font-family:'Fraunces',serif;font-size:19px;color:var(--cream);font-weight:600}
+.area-chip .note{font-size:11px;color:var(--text-dim);letter-spacing:0.08em;text-transform:uppercase;margin-top:5px}
+
+/* ===== STORY ===== */
+.story{background:var(--ink)}
+.story-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:60px;align-items:center}
+@media(max-width:940px){.story-grid{grid-template-columns:1fr;gap:40px}}
+.story-photo{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;border:1px solid var(--border)}
+.story-photo img{width:100%;height:100%;object-fit:cover;filter:saturate(1.02) contrast(1.02)}
+.story-photo .ph-flag{position:absolute;bottom:14px;left:14px;right:14px;font-size:10px;color:var(--cream);background:rgba(16,13,9,0.78);padding:8px 12px;border-radius:4px;letter-spacing:0.04em;text-align:center;backdrop-filter:blur(6px)}
+.story p{font-size:16px;color:var(--text-muted);line-height:1.75;margin-bottom:18px;font-weight:300}
+.story p strong{color:var(--cream);font-weight:500}
+.story-creds{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:30px}
+.story-cred{padding:18px 20px;border:1px solid var(--border);border-radius:5px;background:rgba(34,28,20,0.4)}
+.story-cred-tag{font-family:'Fraunces',serif;font-size:17px;color:var(--terra-bright);font-weight:600;margin-bottom:4px}
+.story-cred-label{font-size:11px;color:var(--text-dim);letter-spacing:0.06em;text-transform:uppercase}
+
+/* ===== TESTIMONIALS ===== */
+.testimonials{background:var(--ink-deep)}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:940px){.testimonial-grid{grid-template-columns:1fr}}
+.testimonial-card{background:linear-gradient(160deg,var(--ink-elev),var(--ink));border:1px solid var(--border);border-radius:6px;padding:34px}
+.testimonial-stars{color:var(--amber);font-size:15px;letter-spacing:2px;margin-bottom:18px}
+.testimonial-quote{font-family:'Fraunces',serif;font-size:19px;color:var(--cream);line-height:1.5;margin-bottom:20px;font-weight:400}
+.testimonial-cite{font-size:13px;color:var(--text-muted);font-weight:600}
+.testimonial-cite-meta{display:block;font-size:11px;color:var(--text-dim);font-weight:400;margin-top:3px;letter-spacing:0.04em}
+
+/* ===== TOOLS ===== */
+.tools{background:var(--ink)}
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:820px){.tools-grid{grid-template-columns:1fr}}
+.tool-card{position:relative;border-radius:8px;overflow:hidden;min-height:280px;display:flex;align-items:flex-end;border:1px solid var(--border)}
+.tool-card .tool-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 0.6s}
+.tool-card:hover .tool-bg{transform:scale(1.06)}
+.tool-card .tool-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,13,9,0.94) 0%,rgba(16,13,9,0.4) 60%,rgba(16,13,9,0.2) 100%)}
+.tool-body{position:relative;z-index:2;padding:34px}
+.tool-body h3{font-family:'Fraunces',serif;font-size:26px;color:var(--cream);font-weight:600;margin-bottom:10px}
+.tool-body p{font-size:14px;color:var(--text-muted);margin-bottom:18px;max-width:38ch;font-weight:300}
+.tool-link{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--terra-bright);font-weight:600}
+
+/* ===== FINAL CTA ===== */
+.final{background:var(--ink-deep);text-align:center}
+.final-inner{max-width:760px;margin:0 auto;padding:0 28px}
+.final h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(34px,4.6vw,60px);line-height:1.06;color:var(--cream);margin-bottom:22px}
+.final h2 em{color:var(--terra-bright);font-style:italic}
+.final p{font-size:17px;color:var(--text-muted);margin-bottom:38px;font-weight:300}
+.final-cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);border-top:1px solid var(--border);padding:70px 0 34px}
+.footer-inner{max-width:1320px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px}
+@media(max-width:820px){.footer-inner{grid-template-columns:1fr 1fr}}
+.footer-brand p{font-size:13px;color:var(--text-dim);line-height:1.7;margin-top:16px;max-width:38ch;font-weight:300}
+.footer-col h4{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:var(--terra);margin-bottom:16px}
+.footer-col ul{list-style:none;display:grid;gap:11px}
+.footer-col a{font-size:13px;color:var(--text-muted);transition:color 0.2s}
+.footer-col a:hover{color:var(--terra-bright)}
+.footer-bottom{max-width:1320px;margin:44px auto 0;padding:26px 28px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--text-dim)}
+.footer-bottom .social{display:flex;gap:20px}
+.footer-bottom a:hover{color:var(--terra-bright)}
+.demo-ribbon{background:var(--terra-soft);border-bottom:1px solid var(--border-bright);text-align:center;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra-bright);padding:8px 16px;position:relative;z-index:120}
+</style>
+</head>
+<body>
+
+<div class="demo-ribbon">Concept redesign built for Javier Melendez &middot; not an official site</div>
+
+<!-- ===== NAV ===== -->
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="logo"><span class="em">Javier</span> Melendez<span class="sub">Austin Realtor</span></a>
+    <div class="nav-links">
+      <a href="#bilingual">En Espa&ntilde;ol</a>
+      <a href="#programs">How I Help</a>
+      <a href="#areas">Areas</a>
+      <a href="#story">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="dot"></span>Se habla espa&ntilde;ol &middot; Austin, TX</div>
+    <h1>Your Austin agent, <em>in your language</em>, on your side.</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-sub">Born in Jalisco. Raised in Austin. <strong>Twelve-plus years</strong> knowing these streets, these schools, and these neighborhoods before they were a listing. Whether it is your first home or your fifth, we run the whole thing together - in English or in Spanish.</p>
+    <div class="hero-cta-row">
+      <a href="#contact" class="cta-primary"><iconify-icon icon="mdi:home-search-outline"></iconify-icon>Start your search</a>
+      <a href="#story" class="cta-ghost">Meet Javier</a>
+    </div>
+  </div>
+  <div class="hero-meta">
+    <div class="hero-meta-label">Serving Central Texas</div>
+    <dl class="hero-meta-grid">
+      <div><dt>12+</dt><dd>Years in Austin</dd></div>
+      <div><dt>2</dt><dd>Languages, full deal</dd></div>
+      <div><dt>11</dt><dd>Metro cities covered</dd></div>
+      <div><dt>eXp</dt><dd>Realty &middot; TREC licensed</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ===== TRUST BAND ===== -->
+<section class="trust">
+  <div class="container">
+    <div class="stat-grid">
+      <div class="stat-tile"><div class="stat-num">12<span class="small">+</span></div><div class="stat-label">Years living &amp; working in Austin</div></div>
+      <div class="stat-tile"><div class="stat-num">100<span class="small">%</span></div><div class="stat-label">Bilingual &middot; English &amp; Spanish</div></div>
+      <div class="stat-tile"><div class="stat-num">XX</div><div class="stat-label">Families guided home<span class="stat-flag">confirm real number</span></div></div>
+      <div class="stat-tile"><div class="stat-num">5.0</div><div class="stat-label">Client rating<span class="stat-flag">confirm from Google / Zillow</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BILINGUAL FEATURE ===== -->
+<section class="bilingual" id="bilingual">
+  <div class="container">
+    <div class="bl-grid">
+      <div class="reveal">
+        <div class="section-eyebrow">01 &mdash; The whole deal, in your language</div>
+        <h2 class="section-title">Comprando casa en Austin? <em>Lo hacemos juntos.</em></h2>
+        <p class="section-sub">Austin's metro is roughly one-third Hispanic, and most agents can only hand a Spanish-speaking family off to a translator halfway through the biggest purchase of their life. Javier does the opposite. <strong>Every step - the tours, the offer, the contract, the lender calls, the closing table - runs in the language you think in.</strong></p>
+        <ul class="bl-list">
+          <li><iconify-icon icon="mdi:file-document-check-outline"></iconify-icon><span><strong>Contracts explained line by line</strong> in Spanish or English, so you sign knowing exactly what you agreed to.</span></li>
+          <li><iconify-icon icon="mdi:handshake-outline"></iconify-icon><span><strong>Negotiation on your behalf</strong> with listing agents and lenders, nothing lost in translation.</span></li>
+          <li><iconify-icon icon="mdi:account-heart-outline"></iconify-icon><span><strong>A local who gets it</strong> - first-generation, first-time buyers, and the questions no one else answers.</span></li>
+        </ul>
+      </div>
+      <div class="bl-card reveal">
+        <div class="bl-flag"><iconify-icon icon="mdi:translate"></iconify-icon>Para familias hispanohablantes</div>
+        <div class="bl-quote">"Tu no tienes que elegir entre un buen agente y uno que hable tu idioma. Aqui tienes los dos."</div>
+        <div class="bl-quote-en">"You should not have to choose between a great agent and one who speaks your language. Here you get both."</div>
+        <ul class="bl-list" style="margin-top:26px">
+          <li><iconify-icon icon="mdi:phone-in-talk-outline"></iconify-icon><span>Llama o escribe cuando quieras - respondemos en espa&ntilde;ol.</span></li>
+          <li><iconify-icon icon="mdi:home-city-outline"></iconify-icon><span>Recorridos por Austin, Round Rock, Georgetown y mas.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROGRAMS ===== -->
+<section class="programs" id="programs">
+  <div class="container">
+    <div class="section-eyebrow">02 &mdash; How Javier helps</div>
+    <h2 class="section-title">Three clear paths. <em>No guesswork.</em></h2>
+    <p class="section-sub">Buying, selling, or testing the water - each one is a real process with real steps, not a "call me and we'll see." Here is exactly what working together looks like.</p>
+    <div class="prog-grid">
+      <div class="prog-card featured reveal">
+        <div class="prog-icon"><iconify-icon icon="mdi:key-chain-variant"></iconify-icon></div>
+        <div class="prog-tag">Signature program</div>
+        <h3>First Home, Done Right</h3>
+        <p>The program built for first-time buyers who have never done this and do not want to feel stupid asking. Clear answers, patient pace, someone in your corner start to finish.</p>
+        <ul class="prog-steps">
+          <li><span class="n">1</span>Buyer strategy call &amp; lender intro</li>
+          <li><span class="n">2</span>Guided tours across your target cities</li>
+          <li><span class="n">3</span>Offer, negotiation &amp; inspection</li>
+          <li><span class="n">4</span>Keys, and a plan for after you move in</li>
+        </ul>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-icon"><iconify-icon icon="mdi:sign-real-estate"></iconify-icon></div>
+        <div class="prog-tag">For sellers</div>
+        <h3>Sell for More, Stress Less</h3>
+        <p>Pricing backed by real Central Texas comps, staging and photography that make buyers stop scrolling, and marketing across the channels Austin buyers actually use.</p>
+        <ul class="prog-steps">
+          <li><span class="n">1</span>Free, honest home valuation</li>
+          <li><span class="n">2</span>Prep, staging &amp; pro photography</li>
+          <li><span class="n">3</span>Listing launch &amp; buyer outreach</li>
+          <li><span class="n">4</span>Offers reviewed with you, in your language</li>
+        </ul>
+      </div>
+      <div class="prog-card reveal">
+        <div class="prog-icon"><iconify-icon icon="mdi:map-marker-radius-outline"></iconify-icon></div>
+        <div class="prog-tag">For the curious</div>
+        <h3>Know Your Options</h3>
+        <p>Not ready to move yet? Get a real read on your home's value, the right neighborhood for your budget, and what the numbers say - no pressure, no obligation.</p>
+        <ul class="prog-steps">
+          <li><span class="n">1</span>Instant home value estimate</li>
+          <li><span class="n">2</span>Neighborhood &amp; budget fit</li>
+          <li><span class="n">3</span>Rent vs. buy the honest math</li>
+          <li><span class="n">4</span>A plan for when the time is right</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AREAS ===== -->
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="section-eyebrow">03 &mdash; Where Javier works</div>
+    <h2 class="section-title">Central Texas, <em>street by street.</em></h2>
+    <p class="section-sub">Twelve years here means knowing which neighborhood fits which family - the commute, the schools, the builder, the resale. These are the cities Javier covers most.</p>
+    <div class="area-grid">
+      <div class="area-chip reveal"><div class="city">Austin</div><div class="note">Home base</div></div>
+      <div class="area-chip reveal"><div class="city">Round Rock</div><div class="note">Family &amp; value</div></div>
+      <div class="area-chip reveal"><div class="city">Georgetown</div><div class="note">Charm &amp; growth</div></div>
+      <div class="area-chip reveal"><div class="city">Leander</div><div class="note">New builds</div></div>
+      <div class="area-chip reveal"><div class="city">Cedar Park</div><div class="note">Schools</div></div>
+      <div class="area-chip reveal"><div class="city">Pflugerville</div><div class="note">First homes</div></div>
+      <div class="area-chip reveal"><div class="city">Hutto</div><div class="note">Affordable</div></div>
+      <div class="area-chip reveal"><div class="city">Buda &amp; Kyle</div><div class="note">South metro</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="story" id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-photo reveal">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1200&q=80" alt="Portrait placeholder">
+        <div class="ph-flag">Placeholder - swap in Javier's real headshot</div>
+      </div>
+      <div class="reveal">
+        <div class="section-eyebrow">04 &mdash; Meet Javier</div>
+        <h2 class="section-title">From Jalisco to Chicago to <em>home in Austin.</em></h2>
+        <p>Javier Melendez was born in Jalisco, Mexico, grew up between Chicago and Austin, and has spent <strong>more than twelve years</strong> making Central Texas home. He studied advertising at Texas State University, which is a fancy way of saying he knows how to make a home look its best and get it in front of the right people.</p>
+        <p>But the reason clients stay with him is simpler. <strong>He treats buying or selling a home like what it is - one of the biggest decisions of your life</strong> - and he brings knowledge, straight talk, and dedication to every step. In English or in Spanish, you always know where things stand.</p>
+        <div class="story-creds">
+          <div class="story-cred"><div class="story-cred-tag">eXp Realty</div><div class="story-cred-label">TREC licensed agent</div></div>
+          <div class="story-cred"><div class="story-cred-tag">Texas State</div><div class="story-cred-label">BA, Advertising</div></div>
+          <div class="story-cred"><div class="story-cred-tag">12+ years</div><div class="story-cred-label">Austin local</div></div>
+          <div class="story-cred"><div class="story-cred-tag">Bilingual</div><div class="story-cred-label">English &amp; Spanish</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials" id="reviews">
+  <div class="container">
+    <div class="section-eyebrow">05 &mdash; In their words</div>
+    <h2 class="section-title">First-time buyers who <em>felt guided,</em> not sold.</h2>
+    <p class="section-sub">Real reviews from Javier's clients. The through-line is always the same: available, patient, and clear when it counted most.</p>
+    <div class="testimonial-grid">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-quote">"Javier was truly exceptional. He was always available for home tours and made the whole process feel easy."</div>
+        <div class="testimonial-cite">Debanhi S.<span class="testimonial-cite-meta">Austin buyer</span></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-quote">"Javier was incredibly helpful to us in finding our first home. He was communicative every step of the way."</div>
+        <div class="testimonial-cite">Jinky R.<span class="testimonial-cite-meta">First-time buyer</span></div>
+      </div>
+      <div class="testimonial-card reveal">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="testimonial-quote">"Javi was a pleasure to work with. We are first-time home buyers and he made it feel doable."</div>
+        <div class="testimonial-cite">Karina<span class="testimonial-cite-meta">First-time buyer</span></div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:30px;font-size:12px;color:var(--text-dim);font-style:italic">Reviews from Javier's published client testimonials. Full reviews and Google / Zillow ratings to be surfaced on the live site.</p>
+  </div>
+</section>
+
+<!-- ===== TOOLS ===== -->
+<section class="tools" id="tools">
+  <div class="container">
+    <div class="section-eyebrow">06 &mdash; Start now, free</div>
+    <h2 class="section-title">Two answers, <em>two minutes.</em></h2>
+    <p class="section-sub">Whether you are buying or thinking about selling, the first step costs nothing and tells you where you really stand.</p>
+    <div class="tools-grid">
+      <div class="tool-card reveal">
+        <div class="tool-bg" style="background-image:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1400&q=80')"></div>
+        <div class="tool-ov"></div>
+        <div class="tool-body">
+          <h3>What's my home worth?</h3>
+          <p>Get a real Central Texas valuation based on live comps, not a guess from a national site.</p>
+          <a href="#contact" class="tool-link">Get my value <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+        </div>
+      </div>
+      <div class="tool-card reveal">
+        <div class="tool-bg" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80')"></div>
+        <div class="tool-ov"></div>
+        <div class="tool-body">
+          <h3>Search Austin homes</h3>
+          <p>Browse every listing across the metro and save the ones you love - Javier does the rest.</p>
+          <a href="#contact" class="tool-link">Start searching <iconify-icon icon="mdi:arrow-right"></iconify-icon></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final" id="contact">
+  <div class="final-inner">
+    <div class="section-eyebrow" style="justify-content:center">07 &mdash; Let's talk / Hablemos</div>
+    <h2>One honest conversation about <em>your next move.</em></h2>
+    <p>No pressure, no script. Tell Javier where you are - buying, selling, or just wondering - and get a straight answer on what makes sense next. In English or in Spanish.</p>
+    <div class="final-cta-row">
+      <a href="tel:+15129429230" class="cta-primary"><iconify-icon icon="mdi:phone"></iconify-icon>Call (512) 942-9230</a>
+      <a href="#top" class="cta-ghost"><iconify-icon icon="mdi:email-outline"></iconify-icon>Send a message</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="logo"><span class="em">Javier</span> Melendez<span class="sub">Austin Realtor</span></div>
+      <p>Bilingual real estate agent with eXp Realty, serving Austin and Central Texas. Born in Jalisco, raised in Austin, 12+ years local. Se habla espa&ntilde;ol.</p>
+    </div>
+    <div class="footer-col">
+      <h4>How I help</h4>
+      <ul>
+        <li><a href="#programs">First-time buyers</a></li>
+        <li><a href="#programs">Sellers</a></li>
+        <li><a href="#tools">Home valuation</a></li>
+        <li><a href="#tools">Home search</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Areas</h4>
+      <ul>
+        <li><a href="#areas">Austin</a></li>
+        <li><a href="#areas">Round Rock</a></li>
+        <li><a href="#areas">Georgetown</a></li>
+        <li><a href="#areas">Leander &amp; Cedar Park</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="tel:+15129429230">(512) 942-9230</a></li>
+        <li><a href="https://www.instagram.com/javiermelendezatx/">Instagram</a></li>
+        <li><a href="#contact">Contact form</a></li>
+        <li><a href="#bilingual">En espa&ntilde;ol</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Javier Melendez &middot; eXp Realty &middot; Austin, TX &middot; Concept redesign</div>
+    <div class="social">
+      <a href="https://www.instagram.com/javiermelendezatx/">Instagram</a>
+      <a href="tel:+15129429230">Call</a>
+      <a href="#top">Top</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.14});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
