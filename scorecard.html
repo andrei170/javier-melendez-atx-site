@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Javier Melendez &middot; Website &amp; Growth Scorecard</title>
+<meta name="theme-color" content="#100d09">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+<style>
+  :root{
+    /* Javier brand palette (espresso + terracotta) */
+    --ink-deep:#100d09; --ink:#17140f; --ink-elev:#221c14; --panel:#1c1710;
+    --terra:#c9642f; --terra-bright:#e28a4f; --terra-deep:#a44e22;
+    --amber:#e0a458; --cream:#f8f1e6; --sand:#ddceb6;
+    --text:#f8f1e6; --mut:#b8a993; --dim:#82725f;
+    --line:rgba(221,206,182,0.14); --line-bright:rgba(226,138,79,0.40);
+    --terra-soft:rgba(201,100,47,0.08);
+    /* semantic grade colors (the grading language - kept regardless of brand) */
+    --gradF:#e5484d; --gradD:#e8702a; --gradC:#dca02f; --gradB:#3fb950; --gradA:#2ea043;
+    --track:#0c0906;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:var(--ink-deep);color:var(--text);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+    background:radial-gradient(ellipse 70% 50% at 20% 0%,rgba(201,100,47,0.10),transparent 55%),radial-gradient(ellipse 60% 50% at 85% 100%,rgba(91,127,140,0.05),transparent 55%)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+  .eyebrow{letter-spacing:.22em;text-transform:uppercase;font-size:11px;color:var(--terra);font-weight:600}
+
+  header{padding:52px 0 30px;border-bottom:1px solid var(--line);
+    background:radial-gradient(1200px 400px at 72% -12%,rgba(201,100,47,0.18),transparent)}
+  h1{font-family:'Fraunces',serif;font-size:clamp(34px,5vw,50px);font-weight:600;margin:12px 0 8px;letter-spacing:-.01em;color:var(--cream)}
+  h1 em{color:var(--terra-bright);font-style:italic}
+  .sub{color:var(--mut);font-size:15px;max-width:60ch}
+  .credline{margin-top:14px;font-size:12px;color:var(--dim);letter-spacing:.04em}
+
+  .hero{display:grid;grid-template-columns:300px 1fr;gap:28px;align-items:center;margin:38px 0 8px}
+  @media(max-width:760px){.hero{grid-template-columns:1fr}}
+  .gradecard{background:linear-gradient(160deg,#2a1c10,var(--ink-elev));border:1px solid var(--line-bright);
+    border-radius:16px;padding:28px;text-align:center;position:relative;overflow:hidden}
+  .gradecard:before{content:"";position:absolute;inset:0;
+    background:radial-gradient(320px 170px at 50% 0,rgba(220,160,47,0.22),transparent)}
+  .bigletter{font-family:'Fraunces',serif;font-size:104px;font-weight:600;line-height:1;color:var(--gradC);position:relative;
+    text-shadow:0 0 44px rgba(220,160,47,.40)}
+  .score100{font-size:18px;color:var(--mut);margin-top:8px;position:relative}
+  .gradesub{font-size:11px;color:var(--dim);margin-top:10px;position:relative;letter-spacing:.14em;text-transform:uppercase}
+  .heroread h2{font-family:'Fraunces',serif;font-size:clamp(22px,3vw,28px);font-weight:600;margin-bottom:12px;color:var(--cream);line-height:1.2}
+  .heroread p{color:var(--mut);font-size:15.5px}
+  .heroread p strong{color:var(--cream);font-weight:600}
+  .heroread .tag{display:inline-block;margin-top:16px;padding:7px 14px;border:1px solid var(--line-bright);
+    border-radius:999px;font-size:12.5px;color:var(--cream);background:var(--terra-soft)}
+
+  section{padding:38px 0;border-bottom:1px solid var(--line)}
+  .h{font-size:12px;color:var(--terra);text-transform:uppercase;letter-spacing:.2em;font-weight:700;margin-bottom:20px;
+    display:flex;align-items:center;gap:12px}
+  .h::before{content:'';width:26px;height:1px;background:var(--terra)}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .row{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:15px 17px;
+    display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;transition:border-color .25s}
+  .row:hover{border-color:var(--line-bright)}
+  .rname{font-weight:600;font-size:15px;color:var(--cream)}
+  .bar{height:7px;background:var(--track);border-radius:99px;margin-top:10px;overflow:hidden}
+  .fill{height:100%;border-radius:99px}
+  .badge{font-family:'Fraunces',serif;font-weight:700;font-size:16px;min-width:48px;height:48px;border-radius:11px;
+    display:flex;align-items:center;justify-content:center;color:var(--ink-deep)}
+  .gF{background:var(--gradF)}.gD{background:var(--gradD)}.gC{background:var(--gradC)}
+  .gB{background:var(--gradB)}.gA{background:var(--gradA)}
+  .sc{font-size:12px;color:var(--mut);margin-top:5px;line-height:1.4}
+
+  .opp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  @media(max-width:760px){.opp{grid-template-columns:1fr}}
+  .ocard{background:linear-gradient(160deg,#12220f,var(--ink));border:1px solid #1f6f3a;border-radius:14px;padding:22px;text-align:center}
+  .ocard .lab{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--mut)}
+  .ocard .big{font-family:'Fraunces',serif;font-size:33px;font-weight:600;color:var(--gradB);margin:10px 0 3px}
+  .ocard .small{font-size:12.5px;color:var(--mut)}
+  .oppnote{color:var(--mut);font-size:14px;margin-top:16px;line-height:1.65}
+  .oppnote b{color:var(--cream)}
+
+  .arrow{display:flex;align-items:center;justify-content:center;gap:22px;margin:8px 0 2px;flex-wrap:wrap}
+  .pill{font-family:'Fraunces',serif;font-size:64px;font-weight:600;line-height:1}
+  .pill.from{color:var(--gradC)} .pill.to{color:var(--gradA)}
+  .pilllab{font-size:11px;color:var(--mut);text-align:center;text-transform:uppercase;letter-spacing:.12em;margin-top:8px}
+  .ar{font-size:36px;color:var(--terra);font-weight:300}
+
+  ul.road{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:760px){ul.road{grid-template-columns:1fr}}
+  ul.road li{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--terra);
+    border-radius:8px;padding:13px 15px;font-size:14.5px;color:var(--cream);display:flex;gap:11px;align-items:flex-start}
+  ul.road li iconify-icon{color:var(--terra-bright);font-size:19px;flex-shrink:0;margin-top:1px}
+  .road2 li{border-left-color:var(--gradB)}
+  .road2 li iconify-icon{color:var(--gradB)}
+
+  .cta{text-align:center;padding:44px 0 56px}
+  .cta h2{font-family:'Fraunces',serif;font-size:clamp(24px,3.4vw,32px);font-weight:600;margin-bottom:12px;color:var(--cream)}
+  .cta h2 em{color:var(--terra-bright);font-style:italic}
+  .cta p{color:var(--mut);font-size:15.5px;max-width:60ch;margin:0 auto}
+  footer{color:var(--dim);font-size:12.5px;text-align:center;padding:26px 0 42px;position:relative;z-index:1}
+  footer b{color:var(--sand);font-weight:600}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Website &amp; Growth Scorecard</div>
+    <h1>Javier <em>Melendez</em></h1>
+    <div class="sub">Austin, TX metro &middot; Website, Discoverability, Conversion, Bilingual Reach &amp; Lead-Gen Readiness</div>
+    <div class="credline">eXp Realty &middot; TREC #759500 &middot; workwithjavi.com</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="gradecard">
+      <div class="eyebrow" style="position:relative;color:var(--amber)">Overall Grade</div>
+      <div class="bigletter">C-</div>
+      <div class="score100">60 / 100</div>
+      <div class="gradesub">Real foundation &middot; wrong axis</div>
+    </div>
+    <div class="heroread">
+      <h2>A solid site, competing on the wrong thing.</h2>
+      <p>This is not a rescue job. You already have more than most Austin agents at your stage: a real multi-page site, a home-valuation tool, live IDX search, and authentic first-time-buyer reviews. The gap is not effort, it is <strong>positioning and capture</strong>. The site leads with "Austin Real Estate Expert" (the one phrase 17,000-plus agents share) and buries the advantage no competitor can copy: a bilingual, Austin-raised agent who runs the whole deal in Spanish. Sharpen that, add a real capture layer, and the same assets become a lead machine.</p>
+      <span class="tag">Strong assets &middot; buried advantage &middot; passive capture</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="h">The Scorecard &middot; 12 Categories</div>
+    <div class="grid">
+
+      <div class="row"><div><div class="rname">Website Design &amp; UX</div><div class="bar"><div class="fill" style="width:72%;background:var(--gradB)"></div></div><div class="sc">Clean, modern, multi-page - a genuine strength to build on</div></div><div class="badge gB">B-</div></div>
+
+      <div class="row"><div><div class="rname">Tools: Valuation &amp; IDX Search</div><div class="bar"><div class="fill" style="width:70%;background:var(--gradB)"></div></div><div class="sc">Home-value tool + live listing search beat most agents at this stage</div></div><div class="badge gB">B-</div></div>
+
+      <div class="row"><div><div class="rname">Mobile Experience</div><div class="bar"><div class="fill" style="width:66%;background:var(--gradC)"></div></div><div class="sc">Responsive and usable, not yet tuned to convert on phones</div></div><div class="badge gC">C+</div></div>
+
+      <div class="row"><div><div class="rname">Proof &amp; Social Proof</div><div class="bar"><div class="fill" style="width:53%;background:var(--gradC)"></div></div><div class="sc">Authentic first-time-buyer stories, but thin and self-published</div></div><div class="badge gC">C-</div></div>
+
+      <div class="row"><div><div class="rname">Brand Email &amp; Consistency</div><div class="bar"><div class="fill" style="width:52%;background:var(--gradC)"></div></div><div class="sc">Personal Gmail on a paid domain undercuts an easy trust win</div></div><div class="badge gC">C-</div></div>
+
+      <div class="row"><div><div class="rname">Bilingual Reach</div><div class="bar"><div class="fill" style="width:45%;background:var(--gradD)"></div></div><div class="sc">Full-transaction Spanish is your rarest edge - barely marketed</div></div><div class="badge gD">D</div></div>
+
+      <div class="row"><div><div class="rname">Reviews Surfaced (Google / Zillow)</div><div class="bar"><div class="fill" style="width:43%;background:var(--gradD)"></div></div><div class="sc">Real ratings likely exist off-site; none pulled onto the page (to confirm)</div></div><div class="badge gD">D</div></div>
+
+      <div class="row"><div><div class="rname">On-Page &amp; Local SEO</div><div class="bar"><div class="fill" style="width:42%;background:var(--gradD)"></div></div><div class="sc">No suburb pages or schema; invisible for the winnable searches</div></div><div class="badge gD">D</div></div>
+
+      <div class="row"><div><div class="rname">Positioning &amp; Differentiation</div><div class="bar"><div class="fill" style="width:40%;background:var(--gradD)"></div></div><div class="sc">Generic "Austin Real Estate Expert" - the most crowded phrase in the market</div></div><div class="badge gD">D-</div></div>
+
+      <div class="row"><div><div class="rname">Lead Capture &amp; Nurture</div><div class="bar"><div class="fill" style="width:40%;background:var(--gradD)"></div></div><div class="sc">Forms present, but no lead magnet, no follow-up - browsers leave with nothing</div></div><div class="badge gD">D</div></div>
+
+      <div class="row"><div><div class="rname">Content &amp; Vlog Engine</div><div class="bar"><div class="fill" style="width:38%;background:var(--gradD)"></div></div><div class="sc">YouTube channel and Vlog page sit dormant, feeding no leads</div></div><div class="badge gD">D-</div></div>
+
+      <div class="row"><div><div class="rname">Tracking &amp; Ads Readiness</div><div class="bar"><div class="fill" style="width:24%;background:var(--gradF)"></div></div><div class="sc">No analytics, pixel, or conversion tracking to measure or scale</div></div><div class="badge gF">F</div></div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="h">The Opportunity in Numbers</div>
+    <div class="opp">
+      <div class="ocard"><div class="lab">Conservative &middot; +1 deal / mo</div><div class="big">~$144k</div><div class="small">added gross commission / year</div></div>
+      <div class="ocard"><div class="lab">Moderate &middot; +2 deals / mo</div><div class="big">~$288k</div><div class="small">added gross commission / year</div></div>
+      <div class="ocard"><div class="lab">Strong &middot; +3 deals / mo</div><div class="big">~$432k</div><div class="small">added gross commission / year</div></div>
+    </div>
+    <p class="oppnote">Based on the Austin metro median sale price of <b>~$439,000</b> and a standard buyer-side commission of roughly <b>2.5-3% (~$12,000 per deal used here)</b>. These are <b>estimates, not a guarantee</b>, and they are gross commission before splits and costs. Even so, a modern site is an <b>owned asset that pays for itself in about a single closing</b> - everything after is upside. The lift comes from recovered leads you currently lose, owning the bilingual and first-time-buyer lanes competitors cannot copy, and finally being able to measure every marketing dollar.</p>
+  </section>
+
+  <section>
+    <div class="h">Projected Grade After Build</div>
+    <div class="arrow">
+      <div><div class="pill from">C-</div><div class="pilllab">Today &middot; 60/100</div></div>
+      <div class="ar">&rarr;</div>
+      <div><div class="pill to">A-</div><div class="pilllab">After build &middot; 88-90/100</div></div>
+    </div>
+    <p class="oppnote" style="text-align:center;max-width:70ch;margin-left:auto;margin-right:auto">Fixing the failing areas - positioning, the bilingual funnel, lead capture, surfaced proof, and tracking - keeps everything that already works and turns a well-built brochure into a measurable, bilingual lead engine.</p>
+  </section>
+
+  <section>
+    <div class="h">Priority Roadmap &middot; Fix First</div>
+    <ul class="road">
+      <li><iconify-icon icon="mdi:translate"></iconify-icon>Re-lead the homepage with the bilingual, Austin-raised story and a named first-time-buyer program</li>
+      <li><iconify-icon icon="mdi:file-download-outline"></iconify-icon>Deploy the free "Austin First-Time Buyer's Roadmap" magnet with name + email capture (EN &amp; ES)</li>
+      <li><iconify-icon icon="mdi:email-check-outline"></iconify-icon>Stand up branded email (javier@workwithjavi.com) and route all capture through it</li>
+      <li><iconify-icon icon="mdi:chart-line"></iconify-icon>Install tracking: GA4, Search Console, and a conversion / ads pixel</li>
+    </ul>
+    <div class="h" style="margin-top:26px">Build Next &middot; Compounding Growth</div>
+    <ul class="road road2">
+      <li><iconify-icon icon="mdi:comment-account-outline"></iconify-icon>Full Spanish-language funnel + nurture sequence, with segmented EN / ES lists</li>
+      <li><iconify-icon icon="mdi:map-marker-multiple-outline"></iconify-icon>Per-suburb landing pages (Round Rock, Georgetown, Leander, Cedar Park, Pflugerville and more)</li>
+      <li><iconify-icon icon="mdi:star-check-outline"></iconify-icon>Surface real Google / Zillow reviews and a proof spine (families served, rating) once confirmed</li>
+      <li><iconify-icon icon="mdi:video-outline"></iconify-icon>Reactivate the vlog on a repeatable cadence and repurpose clips to Instagram and YouTube</li>
+    </ul>
+  </section>
+
+  <div class="cta">
+    <h2>The bilingual lane is <em>open now.</em></h2>
+    <p>No dominant Austin personal-brand agent has claimed the full-transaction bilingual, first-time-buyer position for the metro's roughly one-third Hispanic market. You already own the advantage and paid for the foundation. The move is to point them at each other - and be the first to do it.</p>
+  </div>
+
+  <div style="text-align:center;padding:2px 0 12px"><a href="audit.html" style="display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;text-decoration:none;color:#e0b48a;border:1px solid rgba(255,255,255,0.16);border-radius:999px;padding:12px 22px">Read the full in-depth audit &rarr;</a></div>
+
+</div>
+
+<footer>Prepared by <b>Andrei Givero</b>, AG1 Consulting &nbsp;|&nbsp; Market figures cited from public sources (Unlock MLS / Austin Board of REALTORS, U.S. Census) and are directional. Deal-specific numbers confirmed with Javier before publishing.</footer>
+</body>
+</html>
